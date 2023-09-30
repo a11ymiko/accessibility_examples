@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+span a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    margin: 2 auto;
+    align-items: center;
+}
+
+nav > ul {
+    list-style-type: none;
+    display:flex;
+}
+
+nav > ul > li {
+    display:flex;
+}
+.mainpage-logo {
+    max-height: 5rem;
+}
+
+#menu-good-practices{
+    display: none;
+}
+
+.skiplink{
+    left: 0;
+    padding: 3px;
+    display: block;
+    position: relative;
+    max-width: 50%;
+    transform: translateY(-400%);
+}
+
+.skiplink:focus{
+    transform: translateY(0%);
+}
+
+a:focus,
+button:focus,
+input:focus{
+    outline: 2px solid red!important;
+}

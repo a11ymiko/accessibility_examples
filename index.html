@@ -1,0 +1,55 @@
+<html lang="pl" data-react-helmet="lang">
+    <head>
+        <title>Dobre i złe przykłady zapewnienia dostępności cyfrowej od Accens</title>
+        <link rel="stylesheet" href="dist/tailwind.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body screen_capture_injected="true">
+        <header>
+            <div class='flex items-center content-center flex-wrap mt-2 mb-2'>
+                <a href="#main" class="sr-only focus:not-sr-only">Przejdź do głównej treści</a>
+                <a href="index.html" class="ml-10">
+                    <img class="h-16 pr-4" src="images/logo.png" alt="Strona główna Dobre i złe przykłady zapewnienia dostępności cyfrowej">
+                </a>
+                <nav>
+                    <ul class='grid grid-rows-2 grid-flow-col gap-x-12'>
+                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-good-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('good-practices')">Dobre przykłady</button></li>
+                            <li><ul id="menu-good-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                                <li tabindex="-1"><a href="good/images.html">Obrazy, kontrasty i struktura</a></li>
+                                <li><a href="good/links.html">Linki, przyciski i formularze</a></li>
+                                <li><a href="good/widgets.html">Widgety</a></li>
+                            </ul></li>
+                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-bad-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('bad-practices')">Złe przykłady</button></li>
+                            <li><ul id="menu-bad-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                                <li tabindex="-1"><a href="bad/images.html">Obrazy, kontrasty i struktura</a></li>
+                                <li><a href="bad/links.html">Linki, przyciski i formularze</a></li>
+                                <li><a href="bad/widgets.html">Widgety</a></li>
+                        </ul></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main" class="bg-primary text-white">
+            <div class="pt-5 pb-5 ml-32 mr-32">
+                <h1 class="text-6xl font-bold p-4">Dobre i złe przykłady dostępnych rozwiązań</h1>
+                <p class="text-3xl p-4 font-display">Zastanawiałeś / Zastanawiałaś się kiedyś nad tym gdzie można znaleźć przykłady dostępnych rozwiązań nietypowych komponentów internetowych?</p>
+                <p class="text-3xl p-4">A może uczysz się testować dostępność i chciałbyś / chciałabyś móc porównać komponent zawierający błędy oraz jego dostępny odpowiednik?</p>
+                <p class="text-3xl p-4">Jeżeli tak to mam dla Ciebie świetną wiadomość! Tutaj znajdziesz to czego potrzebujesz.</p>
+                <p class="text-3xl p-4">W tym serwisie zawarliśmy wiele elementów używanych na codzień do tworzenia stron i aplikacji internetowych i podzielono je na elementy zawierające błędy oraz takie, które ich nie zawierają.</p>
+                <p class="text-3xl p-4">Mamy nadzieje, że znajdziesz tu to czego potrzebujesz, a jeśli szukasz czegoś, czego nie ma na tej stronie możesz napisać do nas na <a href="mailto:master@accens.io">master@accens.io</a> i przedstawić problem, który chcesz rozwiązać. Możesz też zgłosić problem lub zaproponować zmiany na naszym <a href="">Githubie</a>.</p>
+            </div>
+        </main>
+        <footer class="pt-10 pl-20">
+                <div class="grid grid-cols-2">
+                    <div>
+                        <span class="text-lg mr-3">Strona stworzona przez <a href="https://www.accens.io/"><img src="images/logo-accens-1000.png" alt="Accens" class="inline-block h-10"></a></span>
+                        <span class="text-lg">Kontakt: <a class="text-lg" href="mailto:master@accens.io">master@accens.io</a></span>
+                    </div>
+                    <div>
+                        <a class="text-lg" href="sitemap.html">Mapa strony</a>
+                    </div>
+                </div>
+        </footer>
+        <script src="functions.js"></script>
+    </body>
+</html>
