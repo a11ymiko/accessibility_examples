@@ -1,3 +1,7 @@
+
+!!!!!!!!!!!!!!!!!!! POPRAWIĆ LINK DO INDEX NA KAŻDEJ STRONIE GOOD I BAD !!!!!!!!!!!!!!!!!!!!!!!
+
+
 Strona z dobrymi przykładami:
     Zdjęcia:
     Łącza:
@@ -5,10 +9,22 @@ Strona z dobrymi przykładami:
 
 Strona ze złymi przykładami:
     Obrazy, Kontrast i Struktura: 
-        1. Obrazy bez alttekstu
-        2. Obrazy z nieprawidłowym alttektem
-        3. Obraz będący łączem bez alttekstu
-        4. Obraz będący łączem z nieprawidłowym alttektem (np. strzałka, albo tekst)
-        5. 
+        Obrazy:
+            1. Obrazy bez alttekstu
+            2. Obrazy z nieprawidłowym alttektem
+            3. Obraz tekstu bez informacji w alttekście
+            4. Obraz będący łączem i przyciskiem bez alttekstu
+            5. Obraz będący łączem i przyciskiem z nieprawidłowym alttekstem (np. strzałka, albo tekst)
+            6. 
+        Kontrast:
+            1. Kontrast tekstu
+            2. Kontrast elementów nietekstowych (przycisk i fokus)
+        Struktura storny:
+            1. Do tej pory wszystko w strukturze było ok, teraz dodamy ostylowany "nagłówek"
+            2. Następnie przy pomocy <h1> dodamy zwykły tekst
+            3. 
+
     Łącza:
+        3. Obraz będący łączem i przyciskiem bez alttekstu
+        4. Obraz będący łączem i przyciskiem z nieprawidłowym alttekstem (np. strzałka, albo tekst)
     Widgety:

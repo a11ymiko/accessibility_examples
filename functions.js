@@ -92,3 +92,29 @@ function menuInvisible(name){
   menu = document.getElementById(name);
   menu.style.display = "none";
 }
+
+//functionality for Sensorycznie
+function productsA11yToggle(name){
+  btn = document.getElementById("btn-"+name);
+  current_state = btn.getAttribute("aria-expanded");
+  if(current_state == "false"){
+    btn.setAttribute("aria-expanded", "true");
+    menuVisible("menu-"+name);
+  }
+  else{
+    btn.setAttribute("aria-expanded", "false");
+    menuInvisible("menu-"+name);
+  }
+}
+
+function productsToggle(name){
+  btn = document.getElementById("btn-"+name);
+  menu = document.getElementById("menu-"+name);
+  current_style = menu.style.display
+  if(current_style === "none"){
+    menuVisible("menu-"+name);
+  }
+  if(current_style === "block"){
+    menuInvisible("menu-"+name);
+  }
+}
