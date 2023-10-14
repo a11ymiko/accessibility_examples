@@ -98,15 +98,47 @@ input:focus{
 }
 
 .mobile-button{
-    width: 2.75rem;
-    height: 2.875rem;
     flex-shrink: 0;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    margin-left: 1.9rem;
+    margin-right: 1.9rem;
+    /*padding-left: 3rem;
+    padding-right: 3rem;*/
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 50px;
+    height: 70px;
+}
+
+.mobile-button>svg{
+}
+
+.mobile-screen{
+    width: 36.25rem;
+    height: 15.875rem;  
+    background-color: #f4f1c4;
+    stroke-width: 1px;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-color: #f4f1c4;;
+    border-radius: 1rem;
 }
 
 .separator{
     height:100px;
+}
+
+.separator-12{
+    height:50px;
+}
+
+.logo-link{
+    height: 65px;
+    width: 65px;
+    margin:1rem;
+}
+.logo-link:focus-visible{
+    border-color: red;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    margin:1rem;
 }

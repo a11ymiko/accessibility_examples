@@ -4,23 +4,25 @@
         <link rel="stylesheet" href="../styles.css">
         <title>Przykłady dostępnych i niedostępnych komponentów</title>
     </head>
-    <body>
-        <main id="main" class="bg-primary text-white"></main>
-            <div class="pt-5 pb-5 ml-32 mr-32">
+    <body style="background-color: #FDF8F2;">
+        <main id="main" style="background-color: #FDF8F2;"></main>
+            <div class="pt-5 pb-5 ml-32 mr-32" >
                 <h2 class="text-4xl font-bold pb-4">Niedostępny przykład</h2>
-                <a href="https://www.accens.io/" class="h-16 pr-4"><img src="../images/123456.png" class="h-16 pr-4"></a>
+                <div style="display:flex;">
+                    <a href="https://www.accens.io/" class="logo-link"><img src="../images/123456.png" class="h-16"></a>
+                </div>
                 <div style="display:flex;">
                 <span style="display:flex;" id="btn-inA11y_products" tabindex="0" onclick="productsToggle('inA11y_products')">Wybierz produkt <svg style="display:flex; margin-top:12px; margin-left:5px;" aria-hidden="true" width="15" height="15" viewBox="0 0 72 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M35.9399 36.1496C33.0374 36.1496 30.1348 35.0301 27.9371 32.8324L0.901871 5.79719C-0.300624 4.5947 -0.300624 2.60436 0.901871 1.40187C2.10436 0.199376 4.0947 0.199376 5.29719 1.40187L32.3325 28.4371C34.3228 30.4274 37.5571 30.4274 39.5474 28.4371L66.5828 1.40187C67.7853 0.199376 69.7756 0.199376 70.9781 1.40187C72.1806 2.60436 72.1806 4.5947 70.9781 5.79719L43.9427 32.8324C41.7451 35.0301 38.8425 36.1496 35.9399 36.1496Z" fill="#292D32"/>
                     </svg></span>
-                    <div id="menu-inA11y_products" style="display:none;">
+                    <div class="absolute top-32" id="menu-inA11y_products" style="display:none; top:16.75rem; background-color: #6ecef7;">
                         <ul>
                             <li><a href="">Produkt pierwszy</a></li>
                             <li><a href="">Produkt drugi</a></li>
                             <li><a href="">Produkt trzeci</a></li>
                         </ul>
                     </div>
-                <button style="display:block; margin-left:30px; background-color: #00B3FF; border-radius: 1rem; width:40px; height:40px; border-width: 1px; border-color: #003863;">
+                <button style="display:block; margin-left:30px; background-color: #6ecef7; border-radius: 1rem; width:40px; height:40px; border-width: 1px; border-color: #003863;">
                     <svg style="display:block; margin:7px;" aria-hidden="true" width="24" height="24" viewBox="0 0 78 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 3H9.39822C13.3695 3 16.495 6.41972 16.1641 10.3542L13.1121 46.9783C12.5973 52.9721 17.3407 58.12 23.3712 58.12H62.5326C67.8276 58.12 72.4608 53.781 72.8653 48.5227L74.8509 20.9443C75.2922 14.8403 70.659 9.87621 64.5182 9.87621H17.0466" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M55.399 76.5424C57.9376 76.5424 59.9954 74.4847 59.9954 71.946C59.9954 69.4073 57.9376 67.3496 55.399 67.3496C52.8603 67.3496 50.8026 69.4073 50.8026 71.946C50.8026 74.4847 52.8603 76.5424 55.399 76.5424Z" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -29,21 +31,24 @@
                         </svg>
                 </button>
                 </div>
+                <div class="separator"></div>
                 <h2 class="text-4xl font-bold pb-4">Dostępny przykład</h2>
-                <a href="https://www.accens.io/" class="h-16 pr-4"><div class="h-16 pr-4"><img src="../images/logo.png" alt="Accens strona główna" class="h-16 pr-4"></div></a>
-                <div class='grid grid-rows-2 grid-flow-col gap-x-12' style="display:flex;">
+                <div style="display:flex;">
+                    <a href="https://www.accens.io/" class="logo-link"><div style="height: 65px;"><img src="../images/logo.png" alt="Accens strona główna" class="h-16"></div></a>
+                </div>
+                <div class='grid grid-rows-2 grid-flow-col gap-x-12' style="display:flex; position:relative">
                 <button style="display:flex; position:relative;" id="btn-A11y_products" aria-expanded="false" onclick="productsA11yToggle('A11y_products')" >Wybierz produkt <svg style="display:flex; margin-top:12px; margin-left:5px;" aria-hidden="true" width="15" height="15" viewBox="0 0 72 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M35.9399 36.1496C33.0374 36.1496 30.1348 35.0301 27.9371 32.8324L0.901871 5.79719C-0.300624 4.5947 -0.300624 2.60436 0.901871 1.40187C2.10436 0.199376 4.0947 0.199376 5.29719 1.40187L32.3325 28.4371C34.3228 30.4274 37.5571 30.4274 39.5474 28.4371L66.5828 1.40187C67.7853 0.199376 69.7756 0.199376 70.9781 1.40187C72.1806 2.60436 72.1806 4.5947 70.9781 5.79719L43.9427 32.8324C41.7451 35.0301 38.8425 36.1496 35.9399 36.1496Z" fill="#292D32"/>
                     </svg>
                     </button>
-                    <div class="absolute top-32" id="menu-A11y_products" style="display:none; top:32rem; background-color: #a3a3a3;">
+                    <div class="absolute" id="menu-A11y_products" style="display:none; top:2.5rem; background-color: #6ecef7;">
                         <ul>
                             <li><a href="">Produkt pierwszy</a></li>
                             <li><a href="">Produkt drugi</a></li>
                             <li><a href="">Produkt trzeci</a></li>
                         </ul>
                     </div>
-                <button style="display:block; margin-left:30px; background-color: #00B3FF; border-radius: 1rem; width:40px; height:40px; border-width: 1px; border-color: #003863;" aria-label="Złóż zamówienie">
+                <button style="display:block; margin-left:30px; background-color: #6ecef7; border-radius: 1rem; width:40px; height:40px; border-width: 1px; border-color: #003863;" aria-label="Złóż zamówienie">
                     <svg style="display:block; margin:7px;" width="24" height="24" viewBox="0 0 78 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 3H9.39822C13.3695 3 16.495 6.41972 16.1641 10.3542L13.1121 46.9783C12.5973 52.9721 17.3407 58.12 23.3712 58.12H62.5326C67.8276 58.12 72.4608 53.781 72.8653 48.5227L74.8509 20.9443C75.2922 14.8403 70.659 9.87621 64.5182 9.87621H17.0466" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M55.399 76.5424C57.9376 76.5424 59.9954 74.4847 59.9954 71.946C59.9954 69.4073 57.9376 67.3496 55.399 67.3496C52.8603 67.3496 50.8026 69.4073 50.8026 71.946C50.8026 74.4847 52.8603 76.5424 55.399 76.5424Z" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
