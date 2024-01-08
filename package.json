@@ -1,8 +1,32 @@
 {
+  "scripts": {
+    "dev": "http-server -c10",
+    "build": "webpack --config=webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -c10"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "http-server": "^14.1.1",
+    "tailwindcss": "^3.3.3",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001547"
-  }
+    "caniuse-lite": "^1.0.30001547",
+    "glob": "^10.3.10",
+    "webpack": "^5.89.0"
+  },
+  "name": "accessibility_examples",
+  "description": "Good and bad examples of accessibility regarding web components",
+  "version": "1.0.0",
+  "main": "functions.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a11ymiko/accessibility_examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a11ymiko/accessibility_examples/issues"
+  },
+  "homepage": "https://github.com/a11ymiko/accessibility_examples#readme"
 }

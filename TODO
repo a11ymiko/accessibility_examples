@@ -2,10 +2,33 @@
 !!!!!!!!!!!!!!!!!!! POPRAWIĆ LINK DO INDEX NA KAŻDEJ STRONIE GOOD I BAD !!!!!!!!!!!!!!!!!!!!!!!
 
 
-Strona z dobrymi przykładami:
-    Zdjęcia:
-    Łącza:
+Strony z dobrymi przykładami:
+    Zdjęcia, kontrast i struktura storny:
+        Zdjęcia:
+            1. Obraz informacyjny z prawidłowym alttekstem
+            2. Obraz dekoracyjny bez alttekstu 
+            3. Obraz tekstu z poprawnym alttekstem
+            4. Obraz będący łączem i przyciskiem z poprawnym alttekstem
+            5. Obraz będący nagłówkiem artykułu (w linku z tytułem nagłówka) poprawnie dodany bez alttekstu wewnątrz jednego linku 
+        Kontrast:
+            1. Kontrast tekstu minimalny wymagany
+            2. Kontrast większy niż minimalny (napis o tym, że nie stosujemy #000000 i #FFFFFF na stronach)
+            3. Kontrast tekstu na obrazie z dodanym "przyciemnieniem"
+            4. Kontrast elementów nietekstowych (przycis)
+            5. Kontrast elementów nietekstowych (fokus)
+        Struktura strony:
+            1. Cała strona ma poprawnie dodane nagłowki (H1 tytuł strony, H2 to "rozdziały" np. Zdjęcia, Kontrast..., H3 to podrozdziały z pojedynczymi przykładami)
+    Łącza i przyciski:
+        1.
+        2. 
+        3. Obraz będący łączem i przyciskiem (z poprawnym alttekstem)
+        4. Obraz plus tekst będący łączem i przyciskiem (pusty alttekst dla obrazu)
     Widgety:
+        1. Rozwijane menu (już mamy dobry przykład)
+        2. Wyskakujce okienko popup
+        3. Rozwijane sekcje Accordeon
+        4. Kalendarz jako Popup
+
 
 Strona ze złymi przykładami:
     Obrazy, Kontrast i Struktura: 
@@ -14,7 +37,7 @@ Strona ze złymi przykładami:
             2. Obrazy z nieprawidłowym alttektem
             3. Obraz tekstu bez informacji w alttekście
             4. Obraz będący łączem i przyciskiem bez alttekstu
-            5. Obraz będący łączem i przyciskiem z nieprawidłowym alttekstem (np. strzałka, albo tekst)
+            5. Obraz będący łączem i przyciskiem z nieprawidłowym alttekstem (np. strzałka, albo tekst W TYM TAKŻE OBRAZ DEKORACYJNY)
             6. 
         Kontrast:
             1. Kontrast tekstu
