@@ -118,3 +118,33 @@ function productsToggle(name){
     menuInvisible("menu-"+name);
   }
 }
+
+//functionalities for popup
+/* function openPopup(){
+  popup = document.getElementById("popup");
+  main = document.getElementById("main");
+  popup.style.display = "block";
+  button_close = document.getElementById('close-popup');
+  moveFocus(button);
+  main.style.display = "none";
+} */
+
+const openPopup = document.getElementById("open-popup");
+const popup = document.getElementById('popup');
+openPopup.addEventListener('click', () => popup.showModal());
+
+
+/*
+function closePopup(){
+  popupLayout = document.getElementById("popup");
+  main = document.getElementById("main");
+  button_open = document.getElementById('open-popup');
+  moveFocus(button);
+  popupLayout.style.display = "none";
+  main.style.display = "block";
+}
+
+function moveFocus(button){
+  button.focus();
+}
+*/

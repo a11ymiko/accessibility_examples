@@ -1,0 +1,28 @@
+
+    <header>
+        <div class='flex items-center content-center flex-wrap mt-2 mb-2'>
+            <a href="#main" class="sr-only focus:not-sr-only">Przejdź do głównej treści</a>
+            <a href="index.html" class="ml-10">
+                <img class="h-16 pr-4" src="images/logo.png" alt="Strona główna Dobre i złe przykłady zapewnienia dostępności cyfrowej">
+            </a>
+            <nav>
+                <ul class='grid grid-rows-2 grid-flow-col gap-x-12'>
+                    <li><button class="bg-primary text-white rounded-xl p-2" id="btn-good-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('good-practices')">Dobre przykłady</button></li>
+                        <li><ul id="menu-good-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                            <li tabindex="-1"><a href="good/images.html">Obrazy, kontrasty i struktura</a></li>
+                            <li><a href="good/links.html">Linki i przyciski</a></li>
+                            <li><a href="good/links.html">Formularze</a></li>
+                            <li><a href="good/widgets.html">Widgety</a></li>
+                        </ul></li>
+                    <li><button class="bg-primary text-white rounded-xl p-2" id="btn-bad-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('bad-practices')">Złe przykłady</button></li>
+                        <li><ul id="menu-bad-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                            <li tabindex="-1"><a href="bad/images.html">Obrazy, kontrasty i struktura</a></li>
+                            <li><a href="bad/links.html">Linki i przyciski</a></li>
+                            <li><a href="bad/forms.html">Formularze</a></li>
+                            <li><a href="bad/widgets.html">Widgety</a></li>
+                    </ul></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    

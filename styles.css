@@ -142,3 +142,7 @@ input:focus{
     border-radius: 0.5rem;
     margin:1rem;
 }
+
+dialog::backdrop{
+    background-color: #555555;
+}

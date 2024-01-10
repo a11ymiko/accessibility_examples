@@ -1,19 +1,26 @@
 {
   "scripts": {
     "dev": "http-server -c10",
-    "build": "webpack --config=webpack.prod.js",
+    "build": "webpack --config=./webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -c10"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
+    "onchange": "^7.1.0",
+    "posthtml-modules": "^0.9.1",
     "tailwindcss": "^3.3.3",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001547",
+    "fs": "^0.0.1-security",
     "glob": "^10.3.10",
+    "posthtml-cli": "^0.10.0",
     "webpack": "^5.89.0"
+  },
+  "browser": {
+    "fs": false
   },
   "name": "accessibility_examples",
   "description": "Good and bad examples of accessibility regarding web components",

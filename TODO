@@ -3,8 +3,8 @@
 
 
 Strony z dobrymi przykładami:
-    Zdjęcia, kontrast i struktura storny:
-        Zdjęcia:
+    Obrazy, kontrast i struktura storny:
+        Obrazy:
             1. Obraz informacyjny z prawidłowym alttekstem
             2. Obraz dekoracyjny bez alttekstu 
             3. Obraz tekstu z poprawnym alttekstem
@@ -23,11 +23,14 @@ Strony z dobrymi przykładami:
         2. 
         3. Obraz będący łączem i przyciskiem (z poprawnym alttekstem)
         4. Obraz plus tekst będący łączem i przyciskiem (pusty alttekst dla obrazu)
+    Formularze:
+        1. 
     Widgety:
         1. Rozwijane menu (już mamy dobry przykład)
         2. Wyskakujce okienko popup
         3. Rozwijane sekcje Accordeon
         4. Kalendarz jako Popup
+        5. Tooltipy zgodne z WCAG
 
 
 Strona ze złymi przykładami:
