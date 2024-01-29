@@ -17,7 +17,18 @@
                 <br>
                 <label for="surname">Nazwisko:</label>
                 <input class="border-black border-2 m-3" id="surname" type="text">
-
+                <br>
+                <input id="agreement" type="checkbox">
+                <label for="agreement">Zgoda na warunki opisane w regulaminie</label>
+                <br>
+                <fieldset>
+                    <legend>Wybierz odpowiednią opcję:</legend>
+                    <input id="option_1" type="radio" name="options" checked><label for="option_1">Opcja 1</label>
+                    <br>
+                    <input id="option_2" type="radio" name="options"><label for="option_2">Opcja 2</label>
+                    <br>
+                    <input id="option_3" type="radio" name="options"><label for="option_3">Opcja 3</label>
+                </fieldset>
                 <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie stale widocznych, opisowych etykiet pól formularza: Wyjątki</p>
                 <p>Wyszukiwarka</p>
                 <br>
@@ -30,102 +41,115 @@
                 <textarea class="border-black border-2 mt-3 mb-3 inline h-10" aria-label="czat" type="text" cols="40" rows="10" style="width:250px;height:150px;"></textarea><button><img src="../images/chat-icon.png" alt="Wyślij wiadomość" class="border-black border-2 rounded-lg w-12 inline"></button>
                 </div>
                 <p class="pt-8 pb-4 font-medium text-3xl">Placeholder, który zmienia się w widoczną etykietę</p>
-                <label id="popup-label">Login:</label>
+                <label for="popup-input" id="popup-label" class="sr-only">Login:</label>
                 <input id="popup-input" onfocus="visiblePopupLabel()" onblur="invisiblePopupLabel()" class="border-black border-2 m-3" id="surname" type="text" placeholder="Login">
                 <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie instrukcji, tłumaczących co i w jakiej formie należy wpisać</p>
-                    <label>
-                        Numer telefonu wraz z numerem kierunkowym
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="tel">
-                    </label>
+                    <label for="full-number">
+                        Numer telefonu wraz z numerem kierunkowym                    </label>
+                        <input id="full-number" class="border-black border-2 mt-3 mb-3 inline" type="tel">
+
                     <br>
-                    <label>
-                        Numer kierunkowy
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="tel" size="3">
-                    </label>
-                    <label>
-                        Numer telefonu
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="tel" size="10">
-                    </label>
+                    <label for="number-prefix">
+                        Numer kierunkowy</label>
+                        <input id="number-prefix" class="border-black border-2 mt-3 mb-3 inline" type="tel" size="3">
+                    
+                    <label for="number">
+                        Numer telefonu</label>
+                        <input id="number" class="border-black border-2 mt-3 mb-3 inline" type="tel" size="10">
+                    
                     <br>
-                    <label>
-                        Pełna data (Dzień - miesiąc - rok)
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="date">
-                    </label>
+                    <label for="full-date">
+                        Pełna data (Dzień - miesiąc - rok)</label>
+                        <input id="full-date" class="border-black border-2 mt-3 mb-3 inline" type="date">
+                    
                     <br>
-                    <label>
-                        Dzień
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
-                    </label>
-                    <label>
-                        Miesiąc
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
-                    </label>
-                    <label>
-                        Rok
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="number" size="4" width="4">
-                    </label>
+                    <label for="day">
+                        Dzień</label>
+                        <input id="day" class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
+                    <label for="month">
+                        Miesiąc</label>
+                        <input id="month" class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
+                    <label for="year">
+                        Rok</label>
+                        <input id="year" class="border-black border-2 mt-3 mb-3 inline" type="number" size="4" width="4">
                     <p class="pt-8 pb-4 font-medium text-3xl">Pola wymagane</p>
                     Pola wymagane najlepiej oznacza zawsze, ale jeśli wszystkie pola w formularzu sa wymagane, to nie trzeba tego robi dla każdego z osobna
                     <br>
-                    <label>
-                        Imię (wymagane)
-                        <input class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
-                    </label>
+                    <label for="name_1">
+                        Imię (wymagane)</label>
+                        <input id="name_1" class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
                     <br>
-                    <label>
-                        Nazwisko (wymagane)
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="text" required>
-                    </label>
+                    <label for="surname_1">
+                        Nazwisko (wymagane)</label>
+                        <input id="surname_1" class="border-black border-2 mt-3 mb-3 inline" type="text" required>
                     <br>
-                    <label>
-                        Email 
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="email">
-                    </label>
+                    <label for="email_1">
+                        Email </label>
+                        <input id="email_1" class="border-black border-2 mt-3 mb-3 inline" type="email">
                     <br>
-                    <label>
-                        Hasło (wymagane)
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
-                    </label>
+                    <label for="password_1">
+                        Hasło (wymagane)</label>
+                        <input id="password_1" class="border-black border-2 mt-3 mb-3 inline" type="password" required>
                     <br>
-                    <label>
-                        Powtoż hasło (wymagane)
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
-                    </label>
+                    <label for="repassword_1">
+                        Powtoż hasło (wymagane)</label>
+                        <input id="repassword_1" class="border-black border-2 mt-3 mb-3 inline" type="password" required>
                     <br>
                     <br>
                     Inne podejście:
                     <br>
                     <p>Pola oznaczone (*) są wymagane</p>
-                    <label>
-                        Imię*
-                        <input class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
-                    </label>
+                    <label for="name_2">
+                        Imię*</label>
+                        <input id="name_2" class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
                     <br>
-                    <label>
-                        Nazwisko*
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="text" required>
-                    </label>
+                    <label for="surname_2">
+                        Nazwisko*</label>
+                        <input id="surname_2" class="border-black border-2 mt-3 mb-3 inline" type="text" required>
                     <br>
-                    <label>
-                        Email 
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="email">
-                    </label>
+                    <label for="email_2">
+                        Email </label>
+                        <input id="email_2" class="border-black border-2 mt-3 mb-3 inline" type="email">
                     <br>
-                    <label>
-                        Hasło*
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
-                    </label>
-                    <br>
-                    <label>
-                        Powtoż hasło*
-                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
-                    </label>
+                    <input id="agreement_2" type="checkbox" required>
+                    <label for="agreement">Zgoda na warunki opisane w Regulaminie*</label>
                 <div class="separator"></div>
                 <h2>Złe przykłady</h2>
                 <p class="pt-8 pb-4 font-medium text-3xl">Brak zapewnienia etykiet i zapewnienie samych placeholderów</p>
                 <h3>Zaloguj się</h3>
                 <input class="border-black border-2 m-3" type="text">
                 <input class="border-black border-2 m-3" type="text" placeholder="Hasło">
+                <br>
+                <p>Data:</p>
+                <input class="border-black border-2 m-3" size="2"> -
+                <input class="border-black border-2 m-3" size="2"> - 
+                <input class="border-black border-2 m-3" size="4">
+                <p class="pt-8 pb-4 font-medium text-3xl">Brak oznaczenia pól wymaganych lub nieprawidłowe ich oznaczenie</p>
+                    <label for="name_3">
+                        Imię</label>
+                        <input id="name_3" class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
+                    <br>
+                    <label for="surname_3">
+                        Nazwisko</label>
+                        <input id="surname_3" class="border-black border-2 mt-3 mb-3 inline" type="text" required>
+                    <br>
+                    <label for="email_3">
+                        Email </label>
+                        <input id="email_3" class="border-black border-2 mt-3 mb-3 inline" type="email">
+                    <br>
+                    <p>Pola oznaczone na czerwono są wymagane</p>
+                    <label for="name_4" style="color:red;">
+                        Imię</label>
+                        <input id="name_4" class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
+                    <br>
+                    <label for="surname_4" style="color:red;">
+                        Nazwisko</label>
+                        <input id="surname_4" class="border-black border-2 mt-3 mb-3 inline" type="text" required>
+                    <br>
+                    <label for="email_4">
+                        Email </label>
+                        <input id="email_4" class="border-black border-2 mt-3 mb-3 inline" type="email">
+                    <br>
             </main>
         </body>
         <script src="functions.js"></script>

@@ -55,7 +55,7 @@ function visiblePopupLabel(){
     const popupLabel = document.getElementById('popup-label');
     const popupInput = document.getElementById('popup-input');
     
-    popupLabel.style.display = "block";
+    popupLabel.className = "";
     popupInput.setAttribute("placeholder", "");
 }
 
@@ -63,7 +63,7 @@ function invisiblePopupLabel(){
     const popupLabel = document.getElementById('popup-label');
     const popupInput = document.getElementById('popup-input');
 
-    popupLabel.style.display = "none";
+    popupLabel.className = "sr-only";
     popupInput.setAttribute("placeholder", "Login");
 }
 
