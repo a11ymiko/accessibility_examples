@@ -1,0 +1,80 @@
+<html lang="pl" data-react-helmet="lang">
+    <head>
+        <link rel="stylesheet" href="../dist/tailwind.css">
+        <link rel="stylesheet" href="../styles.css">
+        <title>Przykłady dostępnych i niedostępnych komponentów: kryterium sukcesu 2.1.1 Klawiatura</title>
+    </head>
+    <body style="background-color: #FDF8F2;">
+        <main id="main" style="background-color: hsl(33, 73%, 97%);"></main>
+            <div class="pt-5 pb-5 ml-32 mr-32">
+                <h1>Kryterium sukcesu 2.1.1 Klawiatura</h1>
+                <h2>Dobre przykłady</h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Linki dodane jako element &lt;a> z atrybutem "href"</p>
+                <a id="first-link" href="https://www.accens.io/">Accens - strona główna</a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Przyciski dodane jako element &lt;button></p>
+                <button id="good_button" class="bg-primary text-white rounded-xl p-2" onclick="toggleInnerHtmlGood()">Następna strona -&gt;</button>
+                <h2>Okna wyskakujce</h2>
+                <div id="popup-container-good">
+                    <button id='open-popup-good' class="bg-primary text-white rounded-xl p-2" aria-haspopup="dialog" aria-expanded="false">Otwórz okno wyskakujce</button>
+                </div>
+
+                <dialog role='dialog' id="popup-good" aria-labelledby='popup-explanation' class="p-8 rounded-2xl">
+                    <form method="dialog">
+                        <div class="width-full">
+                            <button id='close-popup' class="bg-primary text-white rounded-xl p-2 float-right"><span aria-hidden='true'>X</span><span class="sr-only">Zamknij okno wyskakujące</span></button>
+                        </div>
+                        <h1 id="popup-explanation">Okno dialogowe</h1>
+                        <input type="checkbox" id="dialog-checkbox" class="border-2"></input>
+                        <label for="dialog-checkbox">Zapisz mój wybór</label>
+                        <div class="flex justify-between">
+                            <button id="send-popup" type="submit">Wyślij formularz</button>
+                            <button id="cencel-popup">Anuluj</button>
+                        </div>
+                    </form>
+                </dialog>
+
+                <div class="separator"></div>
+                
+                <h2>Złe przykłady</h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Linki dodane jako element &lt; a > bez atrybutu "href"</p>
+                <a onclick="location.href='https://www.accens.io/'">Accens - strona główna</a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Linki z ujemnym "tabindex"</p>
+                <a href="https://www.accens.io/" tabindex="-1:">Accens - strona główna</a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Przyciski dodane jako element &lt;button> z "onmousedown / onmouseup"</p>
+                <button id="bad_button1" class="bg-primary text-white rounded-xl p-2" onmousedown="toggleInnerHtmlBad(1)">Następna strona -&gt;</button>
+                <p class="pt-8 pb-4 font-medium text-3xl">Przyciski dodane jako element &lt;button> z ujemnym "tabindex"</p>
+                <button id="bad_button2" class="bg-primary text-white rounded-xl p-2" onclick="toggleInnerHtmlBad(2)" tabindex="-1">Następna strona -&gt;</button>
+                <h2>Okna wyskakujce</h2>
+                <div id="popup-container-bad">
+                    <button id='open-popup-bad' class="bg-primary text-white rounded-xl p-2" aria-haspopup="dialog" aria-expanded="false">Otwórz okno wyskakujce</button>
+                </div>
+
+                <dialog role='dialog' id="popup-bad" aria-labelledby='popup-explanation-bad' class="p-8 rounded-2xl">
+                    <form method="dialog">
+                        <div class="sr-only">
+                        <p class="pt-8 pb-4 font-medium text-3xl">Linki dodane jako element &lt;a> z atrybutem "href"</p>
+                        <a id="first-link" href="https://www.accens.io/">Accens - strona główna</a>
+                        <p class="pt-8 pb-4 font-medium text-3xl">Przyciski dodane jako element &lt;button></p>
+                        <button id="good_button" class="bg-primary text-white rounded-xl p-2">Następna strona -&gt;</button>
+                        <h2>Okna wyskakujce</h2>
+                        <div id="popup-container-good">
+                            <button id='open-popup-good' class="bg-primary text-white rounded-xl p-2" aria-haspopup="dialog" aria-expanded="false">Otwórz okno wyskakujce</button>
+                        </div>
+                    </div>
+                        <div class="width-full">
+                            <button id='close-popup' class="bg-primary text-white rounded-xl p-2 float-right" ><span aria-hidden='true'>X</span><span class="sr-only">Zamknij okno wyskakujące</span></button>
+                        </div>
+                        <h1 id="popup-explanation-bad">Okno dialogowe - złe</h1>
+                        <input type="checkbox" id="dialog-checkbox" class="border-2"></input>
+                        <label for="dialog-checkbox">Zapisz mój wybór</label>
+                        <div class="flex justify-between">
+                            <button id="send-popup" type="submit">Wyślij formularz</button>
+                            <button id="cencel-popup">Anuluj</button>
+                        </div>
+                    </form>
+                </dialog>
+
+            </main>
+        </body>
+        <script src="functions.js"></script>
+    </html>

@@ -1,0 +1,133 @@
+<html lang="pl" data-react-helmet="lang">
+    <head>
+        <link rel="stylesheet" href="../dist/tailwind.css">
+        <link rel="stylesheet" href="../styles.css">
+        <title>Przykłady dostępnych i niedostępnych komponentów: kryterium sukcesu 3.3.2 Etykiety lub instrukcje</title>
+    </head>
+    <body style="background-color: #FDF8F2;">
+        <main id="main" style="background-color: hsl(33, 73%, 97%);"></main>
+            <div class="pt-5 pb-5 ml-32 mr-32">
+                <h1>Kryterium sukcesu 3.3.2 Etykiety lub instrukcje</h1>
+                <h2>Dobre przykłady</h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie stale widocznych, opisowych etykiet pól formularza</p>
+                <label>
+                    Imię:
+                    <input class="border-black border-2 m-3" type="text">
+                </label>
+                <br>
+                <label for="surname">Nazwisko:</label>
+                <input class="border-black border-2 m-3" id="surname" type="text">
+
+                <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie stale widocznych, opisowych etykiet pól formularza: Wyjątki</p>
+                <p>Wyszukiwarka</p>
+                <br>
+                <div class="flex">
+                <input class="border-black border-2 mt-3 mb-3 inline"aria-label="wyszukiwarka" type="search"><button><img src="../images/search-icon.png" alt="Szukaj" class="border-black border-2 rounded-lg w-10 inline"></button>
+                </div>
+                <p>Czat</p>
+                <br>
+                <div class="flex">
+                <textarea class="border-black border-2 mt-3 mb-3 inline h-10" aria-label="czat" type="text" cols="40" rows="10" style="width:250px;height:150px;"></textarea><button><img src="../images/chat-icon.png" alt="Wyślij wiadomość" class="border-black border-2 rounded-lg w-12 inline"></button>
+                </div>
+                <p class="pt-8 pb-4 font-medium text-3xl">Placeholder, który zmienia się w widoczną etykietę</p>
+                <label id="popup-label">Login:</label>
+                <input id="popup-input" onfocus="visiblePopupLabel()" onblur="invisiblePopupLabel()" class="border-black border-2 m-3" id="surname" type="text" placeholder="Login">
+                <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie instrukcji, tłumaczących co i w jakiej formie należy wpisać</p>
+                    <label>
+                        Numer telefonu wraz z numerem kierunkowym
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="tel">
+                    </label>
+                    <br>
+                    <label>
+                        Numer kierunkowy
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="tel" size="3">
+                    </label>
+                    <label>
+                        Numer telefonu
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="tel" size="10">
+                    </label>
+                    <br>
+                    <label>
+                        Pełna data (Dzień - miesiąc - rok)
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="date">
+                    </label>
+                    <br>
+                    <label>
+                        Dzień
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
+                    </label>
+                    <label>
+                        Miesiąc
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
+                    </label>
+                    <label>
+                        Rok
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="number" size="4" width="4">
+                    </label>
+                    <p class="pt-8 pb-4 font-medium text-3xl">Pola wymagane</p>
+                    Pola wymagane najlepiej oznacza zawsze, ale jeśli wszystkie pola w formularzu sa wymagane, to nie trzeba tego robi dla każdego z osobna
+                    <br>
+                    <label>
+                        Imię (wymagane)
+                        <input class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
+                    </label>
+                    <br>
+                    <label>
+                        Nazwisko (wymagane)
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="text" required>
+                    </label>
+                    <br>
+                    <label>
+                        Email 
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="email">
+                    </label>
+                    <br>
+                    <label>
+                        Hasło (wymagane)
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
+                    </label>
+                    <br>
+                    <label>
+                        Powtoż hasło (wymagane)
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
+                    </label>
+                    <br>
+                    <br>
+                    Inne podejście:
+                    <br>
+                    <p>Pola oznaczone (*) są wymagane</p>
+                    <label>
+                        Imię*
+                        <input class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
+                    </label>
+                    <br>
+                    <label>
+                        Nazwisko*
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="text" required>
+                    </label>
+                    <br>
+                    <label>
+                        Email 
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="email">
+                    </label>
+                    <br>
+                    <label>
+                        Hasło*
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
+                    </label>
+                    <br>
+                    <label>
+                        Powtoż hasło*
+                        <input class="border-black border-2 mt-3 mb-3 inline" type="password" required>
+                    </label>
+                <div class="separator"></div>
+                <h2>Złe przykłady</h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Brak zapewnienia etykiet i zapewnienie samych placeholderów</p>
+                <h3>Zaloguj się</h3>
+                <input class="border-black border-2 m-3" type="text">
+                <input class="border-black border-2 m-3" type="text" placeholder="Hasło">
+            </main>
+        </body>
+        <script src="functions.js"></script>
+        <script src="../functions.js"></script>
+    </html>

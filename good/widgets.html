@@ -32,12 +32,57 @@
 
 
         <main>
-            <div id="main">
+            <div id="main" class="pt-5 pb-5 ml-32 mr-32">
                 <h1>Dobre przykłady dostępnych widgetów od Accens</h1>
                 <h2>Menu rozwijalne</h2>
+                    <button class="bg-primary text-white rounded-xl p-2" id="btn-good-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('good-practices')">Przykładowe menu</button>
+                    <ul id="menu-good-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                        <li tabindex="-1"><a href="good/images.html">Obrazy, kontrasty i struktura</a></li>
+                        <li><a href="good/links.html">Linki, przyciski i formularze</a></li>
+                        <li><a href="good/widgets.html">Widgety</a></li>
+                    </ul>
                 <h2>Okna wyskakujce</h2>
                     <div id="popup-container">
                         <button id='open-popup' class="bg-primary text-white rounded-xl p-2" aria-haspopup="dialog" aria-expanded="false">Otwórz okno wyskakujce</button>
+                    </div>
+                <h2>Rozwijalne sekcje</h2>
+                    <h3>Jedna sekcja otwarta w danym momencie</h3>
+                    <div id="accordion-single" class="flex flex-col">
+                        <button id='toggle-single-accordion1' class="bg-primary text-white rounded-xl p-2 m-10" aria-expanded="false" onclick="toggleSingleAccorden(1)">Często zadawane pytania</button>
+                        <div id="accordion-single-content1" class="hidden">
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                        </div>
+                        <button id='toggle-single-accordion2' class="bg-primary text-white rounded-xl p-2 m-10" aria-expanded="false" onclick="toggleSingleAccorden(2)">Często zadawane pytania</button>
+                        <div id="accordion-single-content2" class="hidden">
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                        </div>
+                    </div>
+                    <h3>Wiele sekcji otwarta w danym momencie</h3>
+                    <div id="accordion-single" class="flex flex-col">
+                        <button id='toggle-multiple-accordion1' class="bg-primary text-white rounded-xl p-2 m-10" aria-expanded="false" onclick="toggleMultipleAccorden(1)">Często zadawane pytania</button>
+                        <div id="accordion-multiple-content1" class="hidden">
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                        </div>
+                        <button id='toggle-multiple-accordion2' class="bg-primary text-white rounded-xl p-2 m-10" aria-expanded="false" onclick="toggleMultipleAccorden(2)">Często zadawane pytania</button>
+                        <div id="accordion-multiple-content2" class="hidden">
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                            <p>Lorem ipsum sit dolores adjfas'lfgrjg;lasdfjg;lafsdgjrela;głównej</p>
+                        </div>
                     </div>
             </div>
             <dialog role='dialog' id="popup" aria-labelledby='popup-explanation' class="p-8 rounded-2xl">

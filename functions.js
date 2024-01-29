@@ -133,7 +133,6 @@ const openPopup = document.getElementById("open-popup");
 const popup = document.getElementById('popup');
 openPopup.addEventListener('click', () => popup.showModal());
 
-
 /*
 function closePopup(){
   popupLayout = document.getElementById("popup");
@@ -148,3 +147,35 @@ function moveFocus(button){
   button.focus();
 }
 */
+
+// Functionality for accordion
+// function openSingleAccordion
+function toggleSingleAccorden(x){
+  const toggleBtnSingleAccordion = document.getElementById("toggle-single-accordion"+x);
+  const accordionSingleContent = document.getElementById('accordion-single-content'+x);
+  //x === 1 ? document.getElementById('accordion-single-content'+x+1).classList.setAttribute('hidden') : accordionSingleContent.classList.setAttribute('hidden');
+  x === 1 ? y=1 : y=2;
+  document.getElementById('accordion-single-content'+x+1).classList.toggle('hidden', x===1);
+  document.getElementById('accordion-single-content'+x-1).classList.toggle('hidden', x===2);
+  toggleBtnSingleAccordion.getAttribute('aria-expanded') === 'true' ? toggleBtnSingleAccordion.setAttribute('aria-expanded','false') : toggleBtnSingleAccordion.setAttribute('aria-expanded','true');
+  accordionSingleContent.classList.toggle('hidden');
+}
+
+function toggleMultipleAccorden(x){
+  const toggleBtnMultipleAccordion = document.getElementById("toggle-multiple-accordion"+x);
+  const accordionMultipleContent = document.getElementById('accordion-multiple-content'+x);
+  toggleBtnMultipleAccordion.getAttribute('aria-expanded') === 'true' ? toggleBtnMultipleAccordion.setAttribute('aria-expanded','false') : toggleBtnMultipleAccordion.setAttribute('aria-expanded','true');
+  accordionMultipleContent.classList.toggle('hidden');
+
+const toggleBtnMultipleAccordion1 = document.getElementById("toggle-multiple-accordion1");
+const accordionMultipleContent1 = document.getElementById('accordion-multiple-content1');
+
+toggleBtnMultipleAccordion1.addEventListener("keyup", (event) => {
+  if (accordionMultipleContent1.classList.contains("hidden")) {
+    if (event.isComposing || event.key === "Escape") {
+      console.log("Escape pressed");
+    }
+  }
+});
+
+}

@@ -1,0 +1,105 @@
+<html lang="pl" data-react-helmet="lang">
+    <head>
+        <link rel="stylesheet" href="../dist/tailwind.css">
+        <link rel="stylesheet" href="../styles.css">
+        <title>Przykłady dostępnych i niedostępnych komponentów: kryterium sukcesu 2.4.4 Cel łącza (w kontekście)</title>
+    </head>
+    <body style="background-color: #FDF8F2;">
+        <main id="main" style="background-color: hsl(33, 73%, 97%);"></main>
+            <div class="pt-5 pb-5 ml-32 mr-32">
+                <h1>Kryterium sukcesu 2.4.4 Cel łącza (w kontekście)</h1>
+                <h2>Dobre przykłady</h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącza tekstowe z dokładną nazwą</p>
+                <a href="https://www.accens.io/">Accens - strona główna</a>
+                <br>
+                <a href="https://accens.pl/blog/pl/dostepny-spektakl-teatr-organizacja/">Jak zorganizować spektakl dostępny dla osób z niepełnosprawnością wzroku</a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącza w postaci obrazów z poprawnym atrybutem 'alt'</p>
+                <a href="https://pl.wikipedia.org/wiki/Podzia%C5%82_administracyjny_Polski"><img src="../images/admin_separation.png" alt="Podział administracyjny Polski - Wikipedia"></a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącze, którego cel wynika z kontekstu</p>
+                <p>Pobierz książkę w postaci: <a href="https://www.google.com/">mp3</a></p>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącze uzupełnione o niewidoczny tekst odczytywany przez czytnik ekranu</p>
+                <h3>Wielkie zmiany w polityce</h3>
+                <p>Bla bla bla bla, zajawka arytułu o wielkich zmianach w polityce, bla bla bla bla</p>
+                <a href="www.google.com">Czytaj więcej<span class="sr-only">o Wielkie zmiany w polityce</span></a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącze znajdujce się wewntrz dobrze opisanej tabeli</p>
+                    <table>
+                        <tr>
+                            <th>Nazwa produktu</th>
+                            <th>Cena</th>
+                            <th>Dostępna ilość</th>
+                            <th>Kup teraz</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Telefon</th>
+                            <td>1000 zł</td>
+                            <td>10 sztuk</td>
+                            <td><a href="https://www.accens.io/">Dodaj do koszyka</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Komputer</th>
+                            <td>6000 zł</td>
+                            <td>5 sztuk</td>
+                            <td><a href="https://www.accens.io/">Dodaj do koszyka</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tablet</th>
+                            <td>3000 zł</td>
+                            <td>15 sztuk</td>
+                            <td><a href="https://www.accens.io/">Dodaj do koszyka</a></td>
+                        </tr>
+                    </table>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącze znajdujce się wewnątrz dobrze opisanych elementów listy</p>
+                </p>
+                <ul>
+                    <li>Najnowszy artykuł. <a href="https://www.accens.io/">Czytaj więcej</a></li>
+                    <li>Najczęściej czytany artykuł. <a href="https://www.accens.io/">Czytaj więcej</a></li>
+                    <li>Artykuł z największą ilością rekcji. <a href="https://www.accens.io/">Czytaj więcej</a></li>
+                </ul>
+                    <p class="pt-8 pb-4 font-medium text-3xl">Dobre praktyki:</p>
+                    <p>Link jeśli znajduje się w zdaniu, to powinien by raczej na jego końcu a nie na pocztku</p>
+                    <p>Unikajmy linków z tekstem: "kliknij tutaj", "czytaj więcej", "link"</p>
+                    <p>Jeśli link otwiera się w nowej karcie przegldarki to opisujmy go przynajmniej niewidocznym tekstem np.: <a href="https://www.wikipedia.pl">Wikipedia <span class='sr-only'>Otwiera się w nowej karcie.</span></a>. Najlepiej jednak zrobi to przy pomocy widocznego tekstu: <a href="https://www.wikipedia.pl">Wikipedia. Otwiera się w nowej karcie.</span></a> lub zastosowa ikonkę z altem "Otwiera się w nowej karcie": <a href="https://www.wikipedia.pl" class="flex">Wikipedia <img class="inline w-6 h-6" src="../images/open_new.png" alt="Otwiera się w nowej karcie"></a> </p>
+                <div class="separator"></div>
+                <h2>Złe przykłady</h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Niedokładne nazwy linków</p>
+                <a href="https://www.accens.io/">Kliknij link</a>
+                <br>
+                <a href="https://www.google.com">Strona główna</a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącza w postaci obrazów z niepoprawnym atrybutem 'alt' </p>
+                <a href="https://pl.wikipedia.org/wiki/Podzia%C5%82_administracyjny_Polski"><img src="../images/admin_separation.png" alt="Administracyjna mapa Polski"></a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Łącze nie zawierajce kontekstu</p>
+                <p>Pobierz książkę w postaci:</p>
+                <p><a href="https://www.google.com/">mp3</a></p>
+                <h3>Z ostatniej chwili: Ważne wydarzenie</h3>
+                <p>To jest zajawka artykułu o ważnym wydarzeniu, które stało się dosłownie chwilę temu. Musisz to przeczytać</p>
+                <p><a href="https://www.accens.io/">Czytaj więcej</a></p>
+                <p class="pt-8 pb-4 font-medium text-3xl">Linki znajdujce się w nieodpowiednio opisanej tabeli</p>
+                <table>
+                    <tr>
+                        <td>Artykuł o ważnym wydarzeniu</td>
+                        <td><a href="https://www.accens.io/">Czytaj więcej</a></td>
+                    </tr>
+                    <tr>
+                        <td>Artykuł o wynikach wyborów</td>
+                        <td><a href="https://www.accens.io/">Czytaj więcej</a></td>
+                    </tr>
+                    <tr>
+                        <td>Artykuł o ważnym wydarzeniu</td>
+                        <td><a href="https://www.accens.io/">Czytaj więcej</a></td>
+                    </tr>
+                </table>
+            <p class="pt-8 pb-4 font-medium text-3xl">Łącze znajdujce się wewnątrz osobnych elemntów listy</p>
+            </p>
+            <ul>
+                <li>Najnowszy artykuł. </li>
+                <li><a href="https://www.accens.io/">Czytaj więcej</a></li>
+                <li>Najczęściej czytany artykuł.</li> 
+                <li><a href="https://www.accens.io/">Czytaj więcej</a></li>
+                <li>Artykuł z największą ilością rekcji.</li> 
+                <li><a href="https://www.accens.io/">Czytaj więcej</a></li>
+            </ul>
+            </main>
+        </body>
+        <script src="functions.js"></script>
+        <script src="../functions.js"></script>
+    </html>
