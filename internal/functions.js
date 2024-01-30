@@ -67,3 +67,37 @@ function invisiblePopupLabel(){
     popupInput.setAttribute("placeholder", "Login");
 }
 
+function changeIcon(x){
+    const btnIcon = document.getElementById('btn_icon'+x);
+    if(x === 0){
+        if(btnIcon.getAttribute("src") === "../images/save.png"){
+            btnIcon.setAttribute("src", "../images/delete.png");
+            btnIcon.setAttribute("alt", "Usuń element");
+            sleep(1000);
+        }
+        if(btnIcon.getAttribute("src") === "../images/delete.png"){
+            btnIcon.setAttribute("src", "../images/save.png");
+            btnIcon.setAttribute("alt", "Zapisz element");
+            sleep(1000);
+        }
+    }
+    if(btnIcon.getAttribute("src") === "../images/save.png"){
+        btnIcon.setAttribute("src", "../images/delete.png");
+        sleep(1000);
+    }
+    if(btnIcon.getAttribute("src") === "../images/delete.png"){
+        btnIcon.setAttribute("src", "../images/save.png");
+        sleep(1000);
+    }
+}
+
+function changeText(){
+    const btnDiv = document.getElementById('btn_div');
+    btnDiv.innerHTML = "Zapisano pomyślnie!";
+}
+
+function toggleInaccessibleAccorden(){
+    const toggleBtnMultipleAccordion = document.getElementById("toggle-inaccessible-accordion");
+    const accordionMultipleContent = document.getElementById('accordion-inaccessible-content');
+    accordionMultipleContent.classList.toggle('hidden');
+  }

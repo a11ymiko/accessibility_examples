@@ -9,6 +9,10 @@
             <div class="pt-5 pb-5 ml-32 mr-32">
                 <h1>Kryterium sukcesu 4.1.2 Nazwa, rola, wartość</h1>
                 <h2>Dobre przykłady</h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Poprawnie dodana nazwa elementu</p>
+                <button><img alt="Zapisz element" class="w-16 h-16" id="btn_icon" src="../images/save.png"></button>
+                <p class="pt-8 pb-4 font-medium text-3xl">Brak zmiany nazwie elementu</p>
+                <button onclick="changeIcon(0)"><img alt="Zapisz element" class="w-16 h-16" id="btn_icon0" src="../images/save.png"></button>
                 <p class="pt-8 pb-4 font-medium text-3xl">Używanie elemntów natywnych dla HTML (bez zmiany ich roli)</p>
                 <div class="grid m-2">
                 <a href="https://www.accens.io/">Link dodany jako tag a</a>
@@ -17,92 +21,80 @@
                 <br>
                 <p>Tekst nieaktywny dodany jako tag p</p>
                 </div>
-                
-                <p class="pt-8 pb-4 font-medium text-3xl">Łącza w postaci obrazów z poprawnym atrybutem 'alt'</p>
-                <a href="https://pl.wikipedia.org/wiki/Podzia%C5%82_administracyjny_Polski"><img src="../images/admin_separation.png" alt="Podział administracyjny Polski - Wikipedia"></a>
-                <p class="pt-8 pb-4 font-medium text-3xl">Łącze, którego cel wynika z kontekstu</p>
-                <p>Pobierz książkę w postaci: <a href="https://www.google.com/">mp3</a></p>
-                <p class="pt-8 pb-4 font-medium text-3xl">Łącze uzupełnione o niewidoczny tekst odczytywany przez czytnik ekranu</p>
-                <h3>Wielkie zmiany w polityce</h3>
-                <p>Bla bla bla bla, zajawka arytułu o wielkich zmianach w polityce, bla bla bla bla</p>
-                <a href="www.google.com">Czytaj więcej<span class="sr-only">o Wielkie zmiany w polityce</span></a>
-                <p class="pt-8 pb-4 font-medium text-3xl">Łącze znajdujce się wewntrz dobrze opisanej tabeli</p>
-                    <table>
-                        <tr>
-                            <th>Nazwa produktu</th>
-                            <th>Cena</th>
-                            <th>Dostępna ilość</th>
-                            <th>Kup teraz</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Telefon</th>
-                            <td>1000 zł</td>
-                            <td>10 sztuk</td>
-                            <td><a href="https://www.accens.io/">Dodaj do koszyka</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Komputer</th>
-                            <td>6000 zł</td>
-                            <td>5 sztuk</td>
-                            <td><a href="https://www.accens.io/">Dodaj do koszyka</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tablet</th>
-                            <td>3000 zł</td>
-                            <td>15 sztuk</td>
-                            <td><a href="https://www.accens.io/">Dodaj do koszyka</a></td>
-                        </tr>
-                    </table>
-                <p class="pt-8 pb-4 font-medium text-3xl">Łącze znajdujce się wewnątrz dobrze opisanych elementów listy</p>
-                </p>
-                <ul>
-                    <li>Najnowszy artykuł. <a href="https://www.accens.io/">Czytaj więcej</a></li>
-                    <li>Najczęściej czytany artykuł. <a href="https://www.accens.io/">Czytaj więcej</a></li>
-                    <li>Artykuł z największą ilością rekcji. <a href="https://www.accens.io/">Czytaj więcej</a></li>
-                </ul>
-                    <p class="pt-8 pb-4 font-medium text-3xl">Dobre praktyki:</p>
-                    <p>Link jeśli znajduje się w zdaniu, to powinien by raczej na jego końcu a nie na pocztku</p>
-                    <p>Unikajmy linków z tekstem: "kliknij tutaj", "czytaj więcej", "link"</p>
-                    <p>Jeśli link otwiera się w nowej karcie przegldarki to opisujmy go przynajmniej niewidocznym tekstem np.: <a href="https://www.wikipedia.pl">Wikipedia <span class='sr-only'>Otwiera się w nowej karcie.</span></a>. Najlepiej jednak zrobi to przy pomocy widocznego tekstu: <a href="https://www.wikipedia.pl">Wikipedia. Otwiera się w nowej karcie.</span></a> lub zastosowa ikonkę z altem "Otwiera się w nowej karcie": <a href="https://www.wikipedia.pl" class="flex">Wikipedia <img class="inline w-6 h-6" src="../images/open_new.png" alt="Otwiera się w nowej karcie"></a> </p>
+                <p class="pt-8 pb-4 font-medium text-3xl"></p>
+                <p class="pt-8 pb-4 font-medium text-3xl">Elementy customowe, informujace o swoim aktualnym i roli stanie</p>
+                <nav>
+                    <ul class='grid grid-rows-2 grid-flow-col gap-x-12'>
+                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-good-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('good-practices')">Dobre przykłady</button></li>
+                            <li><ul id="menu-good-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                                <li tabindex="-1"><a href="good/images.html">Obrazy, kontrasty i struktura</a></li>
+                                <li><a href="good/links.html">Linki i przyciski</a></li>
+                                <li><a href="good/links.html">Formularze</a></li>
+                                <li><a href="good/widgets.html">Widgety</a></li>
+                            </ul></li>
+                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-bad-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('bad-practices')">Złe przykłady</button></li>
+                            <li><ul id="menu-bad-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                                <li tabindex="-1"><a href="bad/images.html">Obrazy, kontrasty i struktura</a></li>
+                                <li><a href="bad/links.html">Linki i przyciski</a></li>
+                                <li><a href="bad/forms.html">Formularze</a></li>
+                                <li><a href="bad/widgets.html">Widgety</a></li>
+                        </ul></li>
+                    </ul>
+                </nav>
+                <div id="accordion-single" class="flex flex-col">
+                    <button id='toggle-multiple-accordion1' class="bg-primary text-white rounded-xl p-2 m-10" aria-expanded="false" onclick="toggleMultipleAccorden(1)">Często zadawane pytania</button>
+                    <div id="accordion-multiple-content1" class="hidden">
+                        <p>Jak dotrzeć do siedziby głównej?</p>
+                        <p>Ile kosztuje bilet miesięczny?</p>
+                        <p>Komu przysługuj ulgi i zniżki?</p>
+                    </div>
+                    <button id='toggle-multiple-accordion2' class="bg-primary text-white rounded-xl p-2 m-10" aria-expanded="false" onclick="toggleMultipleAccorden(2)">Rzadko zadawane pytania</button>
+                    <div id="accordion-multiple-content2" class="hidden">
+                        <p>Jakie jest najszybsze zwierze na świecie?</p>
+                        <p>Ile czasu ważny jest bilet parkingowy?</p>
+                        <p>Z której bramki odlatuje pasażerski lot na księżyc?</p>
+                    </div>
+                </div>
+                <div id="popup-container">
+                    <button id='open-popup' class="bg-primary text-white rounded-xl p-2" aria-haspopup="dialog" aria-expanded="false">Otwórz okno wyskakujce</button>
+                </div>
+                <dialog role='dialog' id="popup" aria-labelledby='popup-explanation' class="p-8 rounded-2xl">
+                    <form method="dialog">
+                        <div class="width-full">
+                            <button id='close-popup' class="bg-primary text-white rounded-xl p-2 float-right"><span aria-hidden='true'>X</span><span class="sr-only">Zamknij okno wyskakujące</span></button>
+                        </div>
+                        <h1 id="popup-explanation">Okno dialogowe</h1>
+                        <input type="checkbox" id="dialog-checkbox" class="border-2"></input>
+                        <label for="dialog-checkbox">Zapisz mój wybór</label>
+                        <div class="flex justify-between">
+                            <button type="submit">Wyślij formularz</button>
+                            <button>Anuluj</button>
+                        </div>
+                    </form>
+                </dialog>
                 <div class="separator"></div>
                 <h2>Złe przykłady</h2>
-                <p class="pt-8 pb-4 font-medium text-3xl">Niedokładne nazwy linków</p>
-                <a href="https://www.accens.io/">Kliknij link</a>
-                <br>
-                <a href="https://www.google.com">Strona główna</a>
-                <p class="pt-8 pb-4 font-medium text-3xl">Łącza w postaci obrazów z niepoprawnym atrybutem 'alt' </p>
-                <a href="https://pl.wikipedia.org/wiki/Podzia%C5%82_administracyjny_Polski"><img src="../images/admin_separation.png" alt="Administracyjna mapa Polski"></a>
-                <p class="pt-8 pb-4 font-medium text-3xl">Łącze nie zawierajce kontekstu</p>
-                <p>Pobierz książkę w postaci:</p>
-                <p><a href="https://www.google.com/">mp3</a></p>
-                <h3>Z ostatniej chwili: Ważne wydarzenie</h3>
-                <p>To jest zajawka artykułu o ważnym wydarzeniu, które stało się dosłownie chwilę temu. Musisz to przeczytać</p>
-                <p><a href="https://www.accens.io/">Czytaj więcej</a></p>
-                <p class="pt-8 pb-4 font-medium text-3xl">Linki znajdujce się w nieodpowiednio opisanej tabeli</p>
-                <table>
-                    <tr>
-                        <td>Artykuł o ważnym wydarzeniu</td>
-                        <td><a href="https://www.accens.io/">Czytaj więcej</a></td>
-                    </tr>
-                    <tr>
-                        <td>Artykuł o wynikach wyborów</td>
-                        <td><a href="https://www.accens.io/">Czytaj więcej</a></td>
-                    </tr>
-                    <tr>
-                        <td>Artykuł o ważnym wydarzeniu</td>
-                        <td><a href="https://www.accens.io/">Czytaj więcej</a></td>
-                    </tr>
-                </table>
-            <p class="pt-8 pb-4 font-medium text-3xl">Łącze znajdujce się wewnątrz osobnych elemntów listy</p>
-            </p>
-            <ul>
-                <li>Najnowszy artykuł. </li>
-                <li><a href="https://www.accens.io/">Czytaj więcej</a></li>
-                <li>Najczęściej czytany artykuł.</li> 
-                <li><a href="https://www.accens.io/">Czytaj więcej</a></li>
-                <li>Artykuł z największą ilością rekcji.</li> 
-                <li><a href="https://www.accens.io/">Czytaj więcej</a></li>
-            </ul>
+                <p class="pt-8 pb-4 font-medium text-3xl">Dodawanie niewłaściwych ról do elementów</p>
+                <p role="link">To jest tekst artykułu, ten tekst jest nieaktywny i nie można go aktywować</p>
+                <h1 role="button">To powinien byc nagłówek, ale ma przypisana rolę button</h1>
+                <a href="https://www.google.com" role="tab">Google kropka com</a>
+
+                <p class="pt-8 pb-4 font-medium text-3xl">Przypisywanie niewłaściwych stanów i wartości do elementów</p>
+                <button aria-expanded="true" role="heading">Przycisk z niewłaściwym stanem</button>
+                <div role="slider">Tekst z niewłaściwym stanem</div>
+                <p class="pt-8 pb-4 font-medium text-3xl">Brak informacji o nazwie elementu</p>
+                <button onclick="changeIcon(1)"><img class="w-16 h-16" id="btn_icon1" src="../images/save.png"></button>
+                <p class="pt-8 pb-4 font-medium text-3xl">Brak zmiany nazwie elementu</p>
+                <button onclick="changeIcon(2)"><img alt="Zapisz element" class="w-16 h-16" id="btn_icon2" src="../images/save.png"></button>
+                <p class="pt-8 pb-4 font-medium text-3xl">Brak informacji o roli elementu</p>
+                <div id="btn_div" onclick="changeText()">Zapisz informację</div>
+                <p class="pt-8 pb-4 font-medium text-3xl">Brak informacji o stanie elementu</p>
+                <button id='toggle-inaccessible-accordion' class="bg-primary text-white rounded-xl p-2 m-10" aria-expanded="false" onclick="toggleInaccessibleAccorden()">Więcej informacji</button>
+                <div id="accordion-inaccessible-content" class="hidden">
+                    <p>Jakie jest najszybsze zwierze na świecie?</p>
+                    <p>Ile czasu ważny jest bilet parkingowy?</p>
+                    <p>Z której bramki odlatuje pasażerski lot na księżyc?</p>
+                </div>
             </main>
         </body>
         <script src="functions.js"></script>
