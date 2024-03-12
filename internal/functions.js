@@ -38,7 +38,7 @@ const openPopupGood = document.getElementById("open-popup-good");
 const openPopupBad = document.getElementById("open-popup-bad");
 const popupBad = document.getElementById('popup-bad');
 const popupGood = document.getElementById('popup-good');
-openPopupGood.addEventListener('click', () => popupGood.showModal('popup-good'));
+openPopupGood.addEventListener('click', () => popupGood.showModal('popup-good'), focus.popupGood);
 
 const closeBtn = document.getElementById('close-popup');
 const cencelBtn = document.getElementById('cencel-popup');
