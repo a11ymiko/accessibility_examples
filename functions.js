@@ -34,6 +34,19 @@ function menuToggle(name){
   }
 }
 
+function menuWorseToggle(name){
+
+  menu = document.getElementById("menu-"+name);
+
+  current_state = menu.style.display;
+  if(current_state == "none"){
+    menuVisible("menu-"+name);
+  }
+  if(current_state == "block"){
+    menuInvisible("menu-"+name);
+  }
+}
+
 //adding event listeners for managing focus states in expandable menus
 menu_good = document.getElementById("menu-good-practices");
 menu_good_node = menu_good.querySelectorAll("a");
