@@ -1,54 +1,115 @@
-<html lang="pl" data-react-helmet="lang">
-    <head>
-        <title>Zadanie domowe - zły przykład</title>
-        <link rel="stylesheet" href="dist/tailwind.css">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body screen_capture_injected="true">
-        <header>
-            <div class='flex items-center content-center flex-wrap mt-2 mb-2'>
-                <a href="#main" class="sr-only focus:not-sr-only">Przejdź do głównej treści</a>
-                <a href="index.html" class="ml-10">
-                    <img class="h-16 pr-4" src="images/logo.png" alt="Strona główna Dobre i złe przykłady zapewnienia dostępności cyfrowej">
-                </a>
-                <nav>
-                    <ul class='grid grid-rows-2 grid-flow-col gap-x-12'>
-                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-good-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('good-practices')">Dobre przykłady</button></li>
-                            <li><ul id="menu-good-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
-                                <li tabindex="-1"><a href="good/images.html">Obrazy, kontrasty i struktura</a></li>
-                                <li><a href="good/links.html">Linki, przyciski i formularze</a></li>
-                                <li><a href="good/widgets.html">Widgety</a></li>
-                            </ul></li>
-                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-bad-practices" aria-expanded="true" aria-haspopup="modal" aria-owns="id1" onclick="menuToggle('bad-practices')">Złe przykłady</button></li>
-                            <li><ul id="menu-bad-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
-                                <li tabindex="-1"><a href="bad/images.html">Obrazy, kontrasty i struktura</a></li>
-                                <li><a href="bad/links.html">Linki, przyciski i formularze</a></li>
-                                <li><a href="bad/widgets.html">Widgety</a></li>
-                        </ul></li>
-                    <li><button class="bg-primary text-white rounded-xl p-2" id="btn-bad-practices" onmousedown="menuWorseToggle('worse-practices')">Gorsze przykłady</button></li>
-                        <li><ul id="menu-worse-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
-                            <li tabindex="-1"><a href="bad/images.html">Obrazy, kontrasty i struktura</a></li>
-                            <li><a href="bad/links.html">Linki, przyciski i formularze</a></li>
-                            <li><a href="bad/widgets.html">Widgety</a>
-                        </ul></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
 
-        </main>
-        <footer class="pt-10 pl-20">
-            <div class="grid grid-cols-2">
-                <div>
-                    <span class="text-xl mr-3">Strona stworzona przez <a href="https://www.accens.io/"><img src="images/logo-accens-1000.png" alt="Accens" class="inline-block h-10"></a></span>
-                    <span class="text-xl">Kontakt: <a class="text-xl" href="mailto:master@accens.io">master@accens.io</a></span>
-                </div>
-                <div>
-                    <a class="text-xl" href="../sitemap.html">Mapa strony</a>
-                </div>
-            </div>
-    </footer>
-    <script src="functions.js"></script>
-</body>
+    <link href="styles/style.css" rel="stylesheet"/>
+
+    <title> Zadanie domowe - Zły przykład </title>
+
+  </head>
+
+  <body>
+    <div class="firstMainDiv">
+      <div class="firstText">
+          <h2>
+            Ta strona posiada pewne błędy dostępności
+          </h2>
+
+          <p>
+            Ciekawe jak wiele z nich uda Ci się znaleźć?
+          </p>
+          <style>
+            .fakeButton{
+              transition: opacity 0.4s;
+            }
+          </style>
+
+          <a class="fakeButton" href="https://accens.pl/" target="_blank"></button>
+
+          <a class="firstLink" href="https://accens.pl/blog/pl/dostepnosc-cyfrowa-definicja/">
+          https://accens.pl/blog/pl/dostepnosc-cyfrowa-definicja/ <svg class="fill-current h-5 w-5 ml-1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg>
+          </a>
+      </div>
+
+      <div class="firstLogo">
+        <img src="images/favicon.png">
+      </div>
+    </div>
+<!--koniec pierwszego diva-->
+      <div class="secondMainDiv">
+        <style>
+          .without-focus:focus{outline:none;}
+          .fake-link{text-decoration:underline;}
+          .fake-link:hover{text-decoration:none;   cursor: pointer;}
+        </style>
+        <h2>
+          Dostępność łączy też jest bardzo ważna
+        </h2>
+          <a href="https://accens.pl/" tabindex="-1"> Łącze </a>
+          <br/>
+          <a href="https://x.com/AccensIO" tabindex="1"> Instagram </a>
+          <br/>
+          <p class="fake-link">
+          Przejdź do strony głównej
+          </p>
+          <br/>
+          <a href="https://accens.pl/blog/pl/"> Najnowsze wpisy </a>
+          <br/>
+          <a class="without-focus" href="https://accens.pl/"> Strona główna  </a>
+          <br/>
+          <a class="without-focus" href="https://accens.pl/lab/bad-example/"> Strona złego przykładu </a>
+          <br/>
+          <a href="https://accens.pl/szkolenia-z-dostepnosci/" aria-label="Tekst odczytywany na tym łączu przez czytnik ekranu jest inny niż widoczny na ekranie. 
+          Dzieje się tak przez zastosowanie aria-label, który ma wyższy priorytet dla czytnika ekranu niż widoczny na ekranie tekst łącza.">Szkolenia</a>
+          <br/>
+          <a href="https://accens.pl/testy-dostepnosci/" aria-expanded="false" aria-owns="id1"> Testy dostępności </a>
+      </div>
+<!--koniec drugiego diva-->
+      <div class="thirdMainDiv">
+        <h2>
+          Problematyczne formularze
+        </h2>
+        <p>
+          Imię:
+          <input type="text">
+        </p>
+        <p>
+          <label>Nazwisko:</label>
+          <input type="text"> <!-- NVDA nie czyta tutaj "nazwisko"-->
+        </p>
+        <input type="text" placeholder="E-mail"> 
+        <br/>
+        <br/>
+        <button class="sendButton"> Wyślij </button>
+      </div>
+<!--koniec trzeciego diva-->
+      <div class="fourthMainDiv">
+          <div class="blindTextDiv">
+            <h2>
+              Czy kontrast tego tekstu względem tła jest odpowiedni?
+            </h2>
+            <a class="secondLink" href="https://accens.pl/blog/pl/automatyzacja-testow-dostepnosci-narzedzia/" target="_blank"> <svg class="fill-current h-5 w-5 order-first mr-1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.707 18.293l-5.293-5.293h11.586c0.552 0 1-0.448 1-1s-0.448-1-1-1h-11.586l5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-7 7c-0.096 0.096-0.168 0.206-0.217 0.324-0.051 0.122-0.076 0.253-0.076 0.383 0 0.256 0.098 0.512 0.293 0.707l7 7c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg>
+               Strona główna </a>
+          </div>
+          <div class="blindImgDiv">
+            <img src="images/Niewidomy 6.1.jpg" alt="Grafika przedstawiająca niewidomego" class="blindImg">
+          </div>
+      </div>
+<!--koniec czwartego diva-->
+      <div class="fifthMainDiv">
+        <p>
+          Alternatywa tekstowa dla obrazów
+        </p>
+        <div class="amputeesDiv">
+          <img src="images/Bezręki_4 kolor.jpg" class="amputeeImg">
+          <img src="images/Bezręki_3.1 kolor.jpg" class="amputeeImg">
+          <img src="images/Bezręki_2 kolor.jpg" class="amputeeImg">
+          <img src="images/Bezręki_5 kolor.jpg" class="amputeeImg">
+        </div>
+      </div>
+ <!--koniec piątego diva-->
+  </body>
+
 </html>
