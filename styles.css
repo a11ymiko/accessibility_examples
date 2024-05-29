@@ -3,146 +3,184 @@
 @tailwind utilities;
 
 body {
-    font-size: 1.5rem;
-    padding: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 h1 {
-    font-size: 3.25rem;
-    font-weight: 700;
-    padding: 1rem;
+  font-size: 3.25rem;
+  font-weight: 700;
+  padding: 1rem;
 }
 
 h2 {
-    font-size: 2.6rem;
-    font-weight: 700;
-    padding: 1rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding: 1rem;
 }
 
 h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
 }
 
 p a{
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
 
 span a{
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
 
 a{
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .header {
-    display: flex;
-    margin: 2 auto;
-    align-items: center;
+  display: flex;
+  margin: 2 auto;
+  align-items: center;
 }
 
 nav > ul {
-    list-style-type: none;
-    display:flex;
+  list-style-type: none;
+  display:flex;
 }
 
 nav > ul > li {
-    display:flex;
+  display:flex;
 }
 .mainpage-logo {
-    max-height: 5rem;
+  max-height: 5rem;
 }
 
 #menu-good-practices{
-    display: none;
+  display: none;
 }
 
 .skiplink{
-    left: 0;
-    padding: 3px;
-    display: block;
-    position: relative;
-    max-width: 50%;
-    transform: translateY(-400%);
+  left: 0;
+  padding: 3px;
+  display: block;
+  position: relative;
+  max-width: 50%;
+  transform: translateY(-400%);
 }
 
 .skiplink:focus{
-    transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 a:focus,
 button:focus,
 input:focus{
-    outline: 2px solid red!important;
+  outline: 2px solid red/*!important*/;
 }
 
 #btn-inA11y_products:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .mobile-menu{
-    width: 36.25rem;
-    height: 5.1875rem;
-    flex-shrink: 0;
-    background-color: #F8F382;
-    stroke-width: 1px;
-    stroke: #000;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-color: #F8F382;
-    border-radius: 1rem;
+  width: 36.25rem;
+  height: 5.1875rem;
+  flex-shrink: 0;
+  background-color: #F8F382;
+  stroke-width: 1px;
+  stroke: #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-color: #F8F382;
+  border-radius: 1rem;
 }
 
 .mobile-button{
-    flex-shrink: 0;
-    margin-left: 1.9rem;
-    margin-right: 1.9rem;
-    /*padding-left: 3rem;
-    padding-right: 3rem;*/
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 50px;
-    height: 70px;
+  flex-shrink: 0;
+  margin-left: 1.9rem;
+  margin-right: 1.9rem;
+  /*padding-left: 3rem;
+  padding-right: 3rem;*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 50px;
+  height: 70px;
 }
 
-.mobile-button>svg{
+.mobile-button>svg{ /*??*/
 }
 
 .mobile-screen{
-    width: 36.25rem;
-    height: 15.875rem;  
-    background-color: #f4f1c4;
-    stroke-width: 1px;
-    stroke: #000;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-color: #f4f1c4;;
-    border-radius: 1rem;
+  width: 36.25rem;
+  height: 15.875rem;  
+  background-color: #f4f1c4;
+  stroke-width: 1px;
+  stroke: #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-color: #f4f1c4;;
+  border-radius: 1rem;
 }
 
 .separator{
-    height:100px;
+  height:100px;
 }
 
 .separator-12{
-    height:50px;
+  height:50px;
 }
 
 .logo-link{
-    height: 65px;
-    width: 65px;
-    margin:1rem;
+  height: 65px;
+  width: 65px;
+  margin:1rem;
 }
 .logo-link:focus-visible{
-    border-color: red;
-    border-width: 1px;
-    border-radius: 0.5rem;
-    margin:1rem;
+  border-color: red;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  margin:1rem;
 }
 
 dialog::backdrop{
-    background-color: #555555;
+  background-color: #555555;
+}
+/* new additions to funcionality */
+
+
+svg {
+  height: 20px;
+  width: 20px;
+  fill: rgb(0 57 99);
+}
+
+.amputeeImg{
+  width: 249px;
+  height: 249px;
+  border-radius: 20px;
+}
+
+#prettyLinkOne, #prettyLinkTwo {
+  text-decoration: none;
+  display:inline-block;
+}
+#prettyLinkOne:after, #prettyLinkTwo:after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: rgb(0 57 99);
+  transition: 300ms;
+}
+#prettyLinkOne:hover:after, #prettyLinkTwo:hover:after {
+  width: 100%;
+}
+
+.notResizable {
+  background-color: aquamarine;
+  height: 150px;
+  width: 1450px;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
