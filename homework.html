@@ -4,112 +4,134 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
 
-    <link href="styles/style.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
 
     <title> Zadanie domowe - Zły przykład </title>
 
   </head>
 
-  <body>
-    <div class="firstMainDiv">
-      <div class="firstText">
-          <h2>
-            Ta strona posiada pewne błędy dostępności
-          </h2>
-
-          <p>
-            Ciekawe jak wiele z nich uda Ci się znaleźć?
-          </p>
-          <style>
-            .fakeButton{
-              transition: opacity 0.4s;
-            }
-          </style>
-
-          <a class="fakeButton" href="https://accens.pl/" target="_blank"></button>
-
-          <a class="firstLink" href="https://accens.pl/blog/pl/dostepnosc-cyfrowa-definicja/">
-          https://accens.pl/blog/pl/dostepnosc-cyfrowa-definicja/ <svg class="fill-current h-5 w-5 ml-1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg>
+  <body class="m-0 p-0">
+    <div class="text-accens_font flex flex-row justify-center mt-0 mb-12 ml-0 mr-0 pt-12 pb-36 pl-4 pr-4 border-none w-full">
+     <div class="w-full max-w-screen-xl flex justify-center">
+      <div class="w-1/2 place-content-center">
+        <h2 class="text-left p-0">
+          Ta strona posiada pewne błędy dostępności
+        </h2>
+        <p class="text-xl sm:text-2xl text-left mt-4">
+          Ciekawe jak wiele z nich uda Ci się znaleźć?
+        </p>
+         <!--<div class="mt-8 flex flex-nowrap lg:whitespace-nowrap items-center justify-start ">
+          <a id="prettyLinkOne" class="text-baseno-underline hover:underline inline" href="https://accens.pl/blog/pl/dostepnosc-cyfrowa-definicja/"> -->
+          <div class="whitespace-nowrap">
+            <a id="prettyLinkOne" class="inline-flex"  href="https://accens.pl/blog/pl/dostepnosc-cyfrowa-definicja/">
+          https://accens.pl/blog/pl/dostepnosc-cyfrowa-definicja/ <svg class="" viewBox="" xmlns="http://www.w3.org/2000/svg"><path d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg>
           </a>
+         </div>
       </div>
-
-      <div class="firstLogo">
-        <img src="images/favicon.png">
+      <div class="w-1/2 flex place-content-center">
+        <img class="" src="images/favicon.png">
+      </div>
+     </div>
+    </div>
+<!--koniec 1 diva-->
+    <div class="text-center m-0 pt-24 pb-24 pl-4 pr-4 border-none">
+      <style>
+        .without-focus:focus{outline:none;}
+        .fake-link{text-decoration:underline;}
+        .fake-link:hover{text-decoration:none;   cursor: pointer;}
+        a:hover {
+          text-decoration: none;
+        }
+      </style>
+      <h2>
+        Dostępność łączy też jest bardzo ważna
+      </h2>
+        <a href="https://accens.pl/" tabindex="-1"> Łącze </a>
+        <br/>
+        <a tabindex="1" href="https://x.com/AccensIO" > Instagram </a> <!--nie łapie tabem od lewej, łapie od prawej-->
+        <br/>
+        <p class="fake-link">
+        Przejdź do strony głównej
+        </p>
+        <br/>
+        <a href="https://accens.pl/blog/pl/"> Najnowsze wpisy </a>
+        <br/>
+        <a class="without-focus" href="https://accens.pl/"> Strona główna  </a>
+        <br/>
+        <a class="without-focus" href="https://accens.pl/lab/bad-example/"> Strona złego przykładu </a>
+        <br/>
+        <a href="https://accens.pl/szkolenia-z-dostepnosci/" aria-label="Tekst odczytywany na tym łączu przez czytnik ekranu jest inny niż widoczny na ekranie. 
+        Dzieje się tak przez zastosowanie aria-label, który ma wyższy priorytet dla czytnika ekranu niż widoczny na ekranie tekst łącza.">Szkolenia</a>
+        <br/>
+        <a href="https://accens.pl/testy-dostepnosci/" aria-expanded="false" aria-owns="id1"> Testy dostępności </a>
+    </div>
+<!--koniec 2 diva-->
+    <div class="text-center bg-light_blue text-white w-full m-0 pt-24 pr-4 pl-4 pb-24">
+      <h2>
+        Problematyczne formularze
+      </h2>
+      <p class="pt-2 mb-6">
+        Imię:
+        <input type="text" id="fname" name="fname">
+        <br/>
+        <br/>
+      </p>
+      
+        <label for="lname">Nazwisko:</label>
+        <input type="text" id="lname" name="lname"> 
+      
+      <br/>
+      <br/>
+      <input type="text" id="fname" name="email" placeholder="E-mail"> 
+      <br/>
+      <br/>
+      <button class=""> Wyślij </button>
+    </div>
+<!-- koniec 3 diva-->
+<div class="flex justify-center mt-0 mb-20 ml-4 mr-4">
+    <div class="bg-gray text-accens_font flex flex-row place-content-center justify-center w-full max-w-screen-xl pt-24 pb-16 pl-16 pr-16 border-none rounded-3xl shadow-2xl">
+      <div class="w-1/2 text-left">
+        <h2>
+          Czy kontrast tego tekstu względem tła jest odpowiedni?
+        </h2>
+        <a id="prettyLinkTwo" class="text-base flex flex-wrap lg:whitespace-nowrap items-center justify-start no-underline hover:underline " href="https://accens.pl/blog/pl/automatyzacja-testow-dostepnosci-narzedzia/" target="_blank"> <svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.707 18.293l-5.293-5.293h11.586c0.552 0 1-0.448 1-1s-0.448-1-1-1h-11.586l5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-7 7c-0.096 0.096-0.168 0.206-0.217 0.324-0.051 0.122-0.076 0.253-0.076 0.383 0 0.256 0.098 0.512 0.293 0.707l7 7c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg>
+           <span>Strona główna</span></a>
+      </div>
+      <div class="w-1/2 flex place-content-center">
+        <img class="rounded-3xl h-80 w-80" src="images/Niewidomy 6.1.jpg" alt="Grafika przedstawiająca niewidomego" >
       </div>
     </div>
-<!--koniec pierwszego diva-->
-      <div class="secondMainDiv">
-        <style>
-          .without-focus:focus{outline:none;}
-          .fake-link{text-decoration:underline;}
-          .fake-link:hover{text-decoration:none;   cursor: pointer;}
-        </style>
-        <h2>
-          Dostępność łączy też jest bardzo ważna
-        </h2>
-          <a href="https://accens.pl/" tabindex="-1"> Łącze </a>
-          <br/>
-          <a href="https://x.com/AccensIO" tabindex="1"> Instagram </a>
-          <br/>
-          <p class="fake-link">
-          Przejdź do strony głównej
-          </p>
-          <br/>
-          <a href="https://accens.pl/blog/pl/"> Najnowsze wpisy </a>
-          <br/>
-          <a class="without-focus" href="https://accens.pl/"> Strona główna  </a>
-          <br/>
-          <a class="without-focus" href="https://accens.pl/lab/bad-example/"> Strona złego przykładu </a>
-          <br/>
-          <a href="https://accens.pl/szkolenia-z-dostepnosci/" aria-label="Tekst odczytywany na tym łączu przez czytnik ekranu jest inny niż widoczny na ekranie. 
-          Dzieje się tak przez zastosowanie aria-label, który ma wyższy priorytet dla czytnika ekranu niż widoczny na ekranie tekst łącza.">Szkolenia</a>
-          <br/>
-          <a href="https://accens.pl/testy-dostepnosci/" aria-expanded="false" aria-owns="id1"> Testy dostępności </a>
+</div>
+<!--koniec 4 diva-->
+    <div class="bg-skin_like text-center pt-12 pr-4 pl-4 pb-24">
+      <p>
+        Alternatywa tekstowa dla obrazów
+      </p>
+      <div class="grid m-auto pt-12 grid-cols-2 sm:grid-cols-4 justify-center " style=" max-width: 1024px;">
+        <img src="images/Bezręki_4 kolor.jpg" class="amputeeImg">
+        <img src="images/Bezręki_3.1 kolor.jpg" class="amputeeImg">
+        <img src="images/Bezręki_2 kolor.jpg" class="amputeeImg">
+        <img src="images/Bezręki_5 kolor.jpg" class="amputeeImg">
       </div>
-<!--koniec drugiego diva-->
-      <div class="thirdMainDiv">
-        <h2>
-          Problematyczne formularze
-        </h2>
-        <p>
-          Imię:
-          <input type="text">
-        </p>
-        <p>
-          <label>Nazwisko:</label>
-          <input type="text"> <!-- NVDA nie czyta tutaj "nazwisko"-->
-        </p>
-        <input type="text" placeholder="E-mail"> 
-        <br/>
-        <br/>
-        <button class="sendButton"> Wyślij </button>
-      </div>
-<!--koniec trzeciego diva-->
-      <div class="fourthMainDiv">
-          <div class="blindTextDiv">
-            <h2>
-              Czy kontrast tego tekstu względem tła jest odpowiedni?
-            </h2>
-            <a class="secondLink" href="https://accens.pl/blog/pl/automatyzacja-testow-dostepnosci-narzedzia/" target="_blank"> <svg class="fill-current h-5 w-5 order-first mr-1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.707 18.293l-5.293-5.293h11.586c0.552 0 1-0.448 1-1s-0.448-1-1-1h-11.586l5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-7 7c-0.096 0.096-0.168 0.206-0.217 0.324-0.051 0.122-0.076 0.253-0.076 0.383 0 0.256 0.098 0.512 0.293 0.707l7 7c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg>
-               Strona główna </a>
-          </div>
-          <div class="blindImgDiv">
-            <img src="images/Niewidomy 6.1.jpg" alt="Grafika przedstawiająca niewidomego" class="blindImg">
-          </div>
-      </div>
-<!--koniec czwartego diva-->
-      <div class="fifthMainDiv">
-        <p>
-          Alternatywa tekstowa dla obrazów
-        </p>
-        <div class="amputeesDiv">
-          <img src="images/Bezręki_4 kolor.jpg" class="amputeeImg">
-          <img src="images/Bezręki_3.1 kolor.jpg" class="amputeeImg">
-          <img src="images/Bezręki_2 kolor.jpg" class="amputeeImg">
-          <img src="images/Bezręki_5 kolor.jpg" class="amputeeImg">
-        </div>
-      </div>
- <!--koniec piątego diva-->
+    </div>
+<!--koniec 5 diva-->
+<div class="mt-5 inline-block">
+  <a href="https://accens.pl/" target="_blank"><img class="w-12 h-12" src="images/PointerLeft.jpg" alt="Strona główna przykładów"></a>
+  <br>
+  <a><img class="w-12 h-12" src="images/PointerLeft.jpg" alt="strzałka w prawo"></a>
+  <br>
+  <button><img class="w-12 h-12" src="images/Dots.jpg" alt="Dodatkowe opcje"
+   aria-expanded="true" aria-haspopup="true"></button>
+  <br>
+  <button><img class="w-12 h-12" src="images/Gear.webp" alt="Koło zębate"></button>
+</div>  
+
+<div class="notResizable">
+  tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy 
+  tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy tekst losowy 
+  tekst losowy tekst losowy tekst losowy tekst losowy 
+  
+</div>
   </body>
 
 </html>
