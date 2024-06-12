@@ -6,6 +6,11 @@ body {
   font-size: 1.5rem;
   padding: 1rem;
 }
+html{
+  font-family: 'Poppins';
+  font-feature-settings: normal;
+  font-variant: normal;
+}
 
 h1 {
   font-size: 3.25rem;
@@ -75,9 +80,9 @@ nav > ul > li {
   transform: translateY(0%);
 }
 
-a:focus,
-button:focus,
-input:focus{
+a:focus-visible,
+button:focus-visible,
+input:focus-visible{
   outline: 2px solid red/*!important*/;
 }
 
@@ -156,14 +161,12 @@ svg {
 }
 
 .amputeeImg{
-  width: 249px;
-  height: 249px;
-  border-radius: 20px;
+  border-radius: 1rem;
 }
 
 #prettyLinkOne, #prettyLinkTwo {
   text-decoration: none;
-  display:inline-block;
+  display:inline-flex;
 }
 #prettyLinkOne:after, #prettyLinkTwo:after {
   content: '';
@@ -184,3 +187,30 @@ svg {
   overflow: hidden;
   margin-bottom: 50px;
 }
+
+.fakeButton { 
+  background-color: rgb(0, 57, 99);
+  padding: 8px 24px; 
+  border-top: 2px solid rgb(0, 57, 99);
+  border-right: 2px solid rgb(0, 57, 99);
+  border-bottom: 2px solid rgb(0, 57, 99);
+  border-left: 2px solid rgb(0, 57, 99);
+  border-radius: 9999px;
+  transition: opacity 0.4s;
+}
+.fakeButton:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width:600px) {
+  .overflow {
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (min-width:601px) and (max-width:1200px) {
+  .overflow {
+    overflow-x: hidden;
+  }
+}
+
