@@ -1,0 +1,395 @@
+<html lang="pl" data-react-helmet="lang">
+    <head>
+        <title>Obrazy, kontrasty i struktura - Dobre i złe przykłady zapewnienia dostępności cyfrowej od Accens</title>
+        <link rel="stylesheet" href="../dist/tailwind.css">
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body screen_capture_injected="true">
+        <header>
+            <div class='flex items-center content-center flex-wrap mt-2 mb-2'>
+                <a href="#main" class="sr-only focus:not-sr-only">Przejdź do głównej treści</a>
+                <a href="../index.html" class="ml-10">
+                    <img class="h-16 pr-4" src="../images/logo.png" alt="Strona główna Dobre i złe przykłady zapewnienia dostępności cyfrowej">
+                </a>
+                <nav>
+                    <ul class='grid grid-rows-2 grid-flow-col gap-x-12'>
+                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-good-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('good-practices')">Dobre przykłady</button></li>
+                            <li><ul id="menu-good-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                                <li tabindex="-1"><a href="good/images.html">Obrazy, kontrasty i struktura</a></li>
+                                <li><a href="good/links.html">Linki, przyciski i formularze</a></li>
+                                <li><a href="good/widgets.html">Widgety</a></li>
+                            </ul></li>
+                        <li><button class="bg-primary text-white rounded-xl p-2" id="btn-bad-practices" aria-expanded="false" aria-haspopup="true" onclick="menuToggle('bad-practices')">Złe przykłady</button></li>
+                            <li><ul id="menu-bad-practices" class="hidden w-auto origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 absolute">
+                                <li tabindex="-1"><a href="bad/images.html">Obrazy, kontrasty i struktura</a></li>
+                                <li><a href="bad/links.html">Linki, przyciski i formularze</a></li>
+                                <li><a href="bad/widgets.html">Widgety</a></li>
+                        </ul></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1> Strona dobrego przykładu </h1>
+                <h2> Przykłady nagłówków na królestwach organizmów </h2>
+                <h3> Zwierzęta </h3>
+                <h4> Wielokomórkowe</h4>
+                <h5> Cudzożywne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+                <h3> Rośliny </h3>
+                <h4> Wielokomórkowe </h4>
+                <h5> Samożywne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+                <h3> Grzyby </h3>
+                <h4> Jednokomórkowe </h4>
+                <h5> Cudzożywne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+                <h4> Wielokomórkowe </h4>
+                <h5> Cudzożywne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+                <h3> Bakterie </h3>
+                <h4> Jednokomórkowe </h4>
+                <h5> Cudzożwyne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+                <h5> Samożywne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+                <h3> Protisty </h3>
+                <h4> Jednokomórkowe, wielokomórkowe lub kolonijne </h4>
+                <h5> Cudzożywne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+                <h5> Samożywne </h5>
+                <p>Fusce iaculis posuere arcu maximus consectetur. Proin pretium erat vel risus dapibus pellentesque. Sed diam mi, malesuada et lobortis vel, bibendum sit amet metus. 
+                    Curabitur maximus nunc vel orci ullamcorper scelerisque. Maecenas suscipit bibendum mi non faucibus. Etiam lacinia enim quis risus ultrices gravida. Suspendisse potenti. 
+                    Phasellus a fringilla justo. Donec nec elit ut nisi maximus dignissim. Pellentesque laoreet euismod ante, sed imperdiet eros ornare id. Nullam at pretium nisl. 
+                    Aliquam at ultrices mauris, sit amet malesuada urna.</p>
+
+                <h2> Linki </h2>
+                <ul>
+                    <li><a href="https://www.accens.io"> Strona główna</a></li>
+                    <li><a href="https://www.YouTube.com"> YouTube </a></li>
+                </ul>
+                <h2> Obrazy </h2>
+                
+                <p class="pt-8 pb-4 font-medium text-3xl">Obraz z dłuższym alttekstem</p>
+                <img alt="Uproszczone logo firmy Accens. Na białym tle błękitno-granatowy ludzik z rozstawionymi na boki rękami i nogami w rozkroku. Nogi tworzą literę A." src="../images/123456.png">
+                <p class="pt-8 pb-4 font-medium text-3xl">Obraz z krótszym alttekstem</p>
+                <img alt="Logo firmy Accens" src="../images/123456.png">
+                <p class="pt-8 pb-4 font-medium text-3xl">Obraz będący linkiem</p>
+                <a href="https://www.accens.io/" class="logo-link"><img src="../images/123456.png" alt="Accens strona główna" class="h-16"></a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Obraz będący przyciskiem</p>
+                <button style="display:block; margin-left:30px; background-color: #6ecef7; border-radius: 1rem; width:40px; height:40px; border-width: 1px; border-color: #003863;" aria-label="Złóż zamówienie">
+                    <svg style="display:block; margin:7px;" aria-hidden="true" width="24" height="24" viewBox="0 0 78 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H9.39822C13.3695 3 16.495 6.41972 16.1641 10.3542L13.1121 46.9783C12.5973 52.9721 17.3407 58.12 23.3712 58.12H62.5326C67.8276 58.12 72.4608 53.781 72.8653 48.5227L74.8509 20.9443C75.2922 14.8403 70.659 9.87621 64.5182 9.87621H17.0466" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M55.399 76.5424C57.9376 76.5424 59.9954 74.4847 59.9954 71.946C59.9954 69.4073 57.9376 67.3496 55.399 67.3496C52.8603 67.3496 50.8026 69.4073 50.8026 71.946C50.8026 74.4847 52.8603 76.5424 55.399 76.5424Z" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.982 76.5424C28.5205 76.5424 30.5784 74.4847 30.5784 71.946C30.5784 69.4073 28.5205 67.3496 25.982 67.3496C23.4435 67.3496 21.3856 69.4073 21.3856 71.946C21.3856 74.4847 23.4435 76.5424 25.982 76.5424Z" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M28.7398 25.0627H72.8653" stroke="#292D32" stroke-width="5.51568" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+                <p class="pt-8 pb-4 font-medium text-3xl">Obraz będący częścią linku</p>
+                <a href="accens.io" >
+                    <img src="../images/pilne.jpeg" alt="" class="h-96">
+                    <h4 class="font-bold text-5xl pb-8">Z ostatniej chwili! Policja złapała złodzieja!</h4>
+                </a>
+                <p class="pt-8 pb-4 font-medium text-3xl">Obraz dekoracyjny</p>
+                <img alt="" src="../images/line.png" class="h-32 w-full">
+                <p class="pt-8 pb-4 font-medium text-3xl">Obraz tekstu</p>
+                <img alt="Zeszłotygodniowy wpis Accens na LinkedIn. Ponad wpisem informacja, że Accens ma 1214 obserwujcych. Treś wpisu: Witamy w nowym roku. emoji wystrzelonego konfetti. Jako noworoczne postanowienia proponujemy Wam wdrażanie dostępności cyfrowej do swoich projektów. Dbanie o swoich odbiorców oraz tworzeie inkluzywnych rozwiązań to sprawdzony przepis na sukces. emoji worek pieniędzy." src="../images/screenshot.png">
+
+                <h2> Formularze </h2>
+                <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie stale widocznych, opisowych etykiet pól formularza</p>
+                <label>
+                    Imię:
+                    <input class="border-black border-2 m-3" type="text">
+                </label>
+                <br>
+                <label for="surname">Nazwisko:</label>
+                <input class="border-black border-2 m-3" id="surname" type="text">
+                <br>
+                <input id="agreement" type="checkbox">
+                <label for="agreement">Zgoda na warunki opisane w regulaminie</label>
+                <br>
+                <fieldset>
+                    <legend>Wybierz odpowiednią opcję:</legend>
+                    <input id="option_1" type="radio" name="options" checked><label for="option_1">Opcja 1</label>
+                    <br>
+                    <input id="option_2" type="radio" name="options"><label for="option_2">Opcja 2</label>
+                    <br>
+                    <input id="option_3" type="radio" name="options"><label for="option_3">Opcja 3</label>
+                </fieldset>
+                <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie stale widocznych, opisowych etykiet pól formularza: Wyjątki</p>
+                <p>Wyszukiwarka</p>
+                <br>
+                <div class="flex">
+                <input class="border-black border-2 mt-3 mb-3 inline"aria-label="wyszukiwarka" type="search"><button><img src="../images/search-icon.png" alt="Szukaj" class="border-black border-2 rounded-lg w-10 inline"></button>
+                </div>
+                <p>Czat</p>
+                <br>
+                <div class="flex">
+                <textarea class="border-black border-2 mt-3 mb-3 inline h-10" aria-label="czat" type="text" cols="40" rows="10" style="width:250px;height:150px;"></textarea><button><img src="../images/chat-icon.png" alt="Wyślij wiadomość" class="border-black border-2 rounded-lg w-12 inline"></button>
+                </div>
+                <p class="pt-8 pb-4 font-medium text-3xl">Placeholder, który zmienia się w widoczną etykietę</p>
+                <label for="popup-input" id="popup-label" class="sr-only">Login:</label>
+                <input id="popup-input" onfocus="visiblePopupLabel()" onblur="invisiblePopupLabel()" class="border-black border-2 m-3" id="surname" type="text" placeholder="Login">
+                <p class="pt-8 pb-4 font-medium text-3xl">Zapewnienie instrukcji, tłumaczących co i w jakiej formie należy wpisać</p>
+                    <label for="full-number">
+                        Numer telefonu wraz z numerem kierunkowym                    </label>
+                        <input id="full-number" class="border-black border-2 mt-3 mb-3 inline" type="tel">
+
+                    <br>
+                    <label for="number-prefix">
+                        Numer kierunkowy</label>
+                        <input id="number-prefix" class="border-black border-2 mt-3 mb-3 inline" type="tel" size="3">
+                    
+                    <label for="number">
+                        Numer telefonu</label>
+                        <input id="number" class="border-black border-2 mt-3 mb-3 inline" type="tel" size="10">
+                    
+                    <br>
+                    <label for="full-date">
+                        Pełna data (Dzień - miesiąc - rok)</label>
+                        <input id="full-date" class="border-black border-2 mt-3 mb-3 inline" type="date">
+                    
+                    <br>
+                    <label for="day">
+                        Dzień</label>
+                        <input id="day" class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
+                    <label for="month">
+                        Miesiąc</label>
+                        <input id="month" class="border-black border-2 mt-3 mb-3 inline" type="number" size="2" width="2">
+                    <label for="year">
+                        Rok</label>
+                        <input id="year" class="border-black border-2 mt-3 mb-3 inline" type="number" size="4" width="4">
+                    <p class="pt-8 pb-4 font-medium text-3xl">Pola wymagane</p>
+                    Pola wymagane najlepiej oznacza zawsze, ale jeśli wszystkie pola w formularzu sa wymagane, to nie trzeba tego robi dla każdego z osobna
+                    <br>
+                    <label for="name_1">
+                        Imię (wymagane)</label>
+                        <input id="name_1" class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
+                    <br>
+                    <label for="surname_1">
+                        Nazwisko (wymagane)</label>
+                        <input id="surname_1" class="border-black border-2 mt-3 mb-3 inline" type="text" required>
+                    <br>
+                    <label for="email_1">
+                        Email </label>
+                        <input id="email_1" class="border-black border-2 mt-3 mb-3 inline" type="email">
+                    <br>
+                    <label for="password_1">
+                        Hasło (wymagane)</label>
+                        <input id="password_1" class="border-black border-2 mt-3 mb-3 inline" type="password" required>
+                    <br>
+                    <label for="repassword_1">
+                        Powtoż hasło (wymagane)</label>
+                        <input id="repassword_1" class="border-black border-2 mt-3 mb-3 inline" type="password" required>
+                    <br>
+                    <br>
+                    Inne podejście:
+                    <br>
+                    <p>Pola oznaczone (*) są wymagane</p>
+                    <label for="name_2">
+                        Imię*</label>
+                        <input id="name_2" class="border-black border-2 mt-3 mb-3 inline"  type="text" required>
+                    <br>
+                    <label for="surname_2">
+                        Nazwisko*</label>
+                        <input id="surname_2" class="border-black border-2 mt-3 mb-3 inline" type="text" required>
+                    <br>
+                    <label for="email_2">
+                        Email </label>
+                        <input id="email_2" class="border-black border-2 mt-3 mb-3 inline" type="email">
+                    <br>
+                    <input id="agreement_2" type="checkbox" required>
+                    <label for="agreement">Zgoda na warunki opisane w Regulaminie*</label>
+
+                <h2> Tabele </h2>
+                <h3> Dobre przykłady</h3>
+                        <!--2 tabele do modyfikacji-->
+                <h4> Przykład 1 </h4>
+                        <table aria-labelledby="table-overview">
+                            <tbody><tr>
+                                <th>Numer</th>
+                                <th>Nazwa</th>
+                                <th>Kategorie</th>
+                                <th>Data</th>
+                                <th>Opcje</th>
+                            </tr>
+                            <tr class="cat-1" style="display: table-row;">
+                                <td>1</td>
+                                <td id="product-x">Produkt X</td>
+                                <td>Kategoria 1</td>
+                                <td></td>
+                                <td><button aria-labelledby="detailsX">Szczegóły</button> <span class="hidden" id="detailsX">Szczegóły produktu X</span></td>
+                            </tr>
+                            <tr class="cat-1" style="display: table-row;">
+                              <td>2</td>
+                              <td>Produkt Y</td>
+                              <td>Kategoria 1</td>
+                              <td></td>
+                              <td><button aria-labelledby="detailsY">Szczegóły</button> <span class="hidden" id="detailsY">Szczegóły produktu Y</span></td>
+                          </tr>
+                          <tr class="cat-1 cat-2" style="display: table-row;">
+                              <td>3</td>
+                              <td>Produkt Z</td>
+                              <td>Kategoria 1, Kategoria 2</td>
+                              <td></td>
+                              <td><button aria-labelledby="detailsZ">Szczegóły</button> <span class="hidden" id="detailsZ">Szczegóły produktu Z</span></td>
+                          </tr>
+                          <tr class="cat-1 cat-3" style="display: table-row;">
+                              <td>4</td>
+                              <td>Produkt XY</td>
+                              <td>Kategoria 1, Kategoria 3</td>
+                              <td></td>
+                              <td><button aria-labelledby="detailsXY">Szczegóły</button> <span class="hidden" id="detailsXY">Szczegóły produktu XY</span></td>
+                          </tr>
+                          <tr class="cat-2 cat-3" style="display: table-row;">
+                              <td>5</td>
+                              <td>Produkt XZ</td>
+                              <td>Kategoria 2, Kategoria 3</td>
+                              <td></td>
+                              <td><button aria-labelledby="detailsXZ">Szczegóły</button> <span class="hidden" id="detailsXZ">Szczegóły produktu XZ</span></td>
+                          </tr>
+                          <tr class="cat-2" style="display: table-row;">
+                              <td>6</td>
+                              <td>Produkt YZ</td>
+                              <td>Kategoria 2</td>
+                              <td></td>
+                              <td><button aria-labelledby="detailsYZ">Szczegóły</button> <span class="hidden" id="detailsYZ">Szczegóły produktu YZ</span></td>
+                          </tr>
+                          <tr class="cat-3" style="display: table-row;">
+                              <td>7</td>
+                              <td>Produkt 0</td>
+                              <td>Kategoria 3</td>
+                              <td></td>
+                              <td><button aria-labelledby="details0">Szczegóły</button> <span class="hidden" id="details0">Szczegóły produktu 0</span></td>
+                          </tr>
+                        </tbody></table>
+
+                <h4> Przykład 2 </h4>
+
+                        <table style="font-size: 0.7rem; border-collapse: separate; border-spacing: 0px; line-height: 1.15rem; border-style: none;">
+                        <caption style="font-size: 1rem;">Kluczowe parametry dostępnych na rynku narzędzi do automatycznego badania dostępności:</caption>
+                        <tr style="background-color: rgb(0, 57, 99); color: white;">
+                            <th style="background-color: rgb(0, 57, 99); color: white; position: sticky; left: 0px;"></th>
+                            <th scope="col" id="axe">Axe Monitor</th>
+                            <th scope="col" id="pope">Pope Tech</th>
+                            <th scope="col" id="arc">ARC</th><th scope="col" id="tenon">Tenon</th>
+                            <th scope="col" id="amp">AMP</th><th scope="col" id="a11y">A11yWatch</th>
+                            <th scope="col" id="asq">Asqatasun</th>
+                            <th scope="col" id="pa11y" style="border: rgb(0, 57, 99);">Pa11y</th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="plan" style="background-color: rgb(0, 57, 99); color: white; position: sticky; left: 0px;">Darmowy plan</th>
+                            <td headers="axe plan">nie</td>
+                            <td headers="pope plan">nie</td>
+                            <td headers="arc plan">tak</td>
+                            <td headers="tenon plan">tak</td>
+                            <td headers="amp plan">nie</td>
+                            <td headers="a11y plan">tak</td>
+                            <td headers="asq plan">tak</td>
+                            <td headers="pa11y plan">tak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="cena" style="background-color: rgb(0, 57, 99); color: white; position: sticky; left: 0px;">Cena</th>
+                            <td>nie podaje</td>
+                            <td>165$/miesiac do tysiąca stron</td>
+                            <td>29$/miesiąc/użytkownik + 0.05$/pojedyncze sprawdzenie</td>
+                            <td>0.05$ za każde wywołanie API</td><td>nie podaje</td>
+                            <td>9,99$/miesiąc do 5 stron</td><td>darmowe</td>
+                            <td>darmowe</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="popularnosc" style="background-color: rgb(0, 57, 99); color: white; position: sticky; left: 0px;">Popularność</th>
+                            <td>bardzo duża</td><td>średnia</td>
+                            <td>bardzo duża</td><td>mała</td>
+                            <td>mała</td><td>bardzo mała</td>
+                            <td>bardzo mała</td><td>duża</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="auth" style="background-color: rgb(0, 57, 99); color: white; position: sticky; left: 0px;">Weryfikacja stron wymagajacych autentykacji</th>
+                            <td>tak</td>
+                            <td>tak</td>
+                            <td>tak</td>
+                            <td>nie</td>
+                            <td>tak</td>
+                            <td>nie</td>
+                            <td>nie</td>
+                            <td>tak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="mobile" style="background-color: rgb(0, 57, 99); color: white; position: sticky; left: 0px;">Weryfikacia webowych aplikacji w wersii mobilnej</th>
+                            <td>tak</td>
+                            <td>tak</td>
+                            <td>tak</td>
+                            <td>tak</td>
+                            <td>nie</td>
+                            <td>nie</td>
+                            <td>tak</td>
+                            <td>tak</td>
+                        </tr>
+                        </table>
+                <h3> Złe przykłady </h3>
+                <h4> Przykład 1</h4>
+                    <table id="table1">
+                        <tr>
+                        <th>Kategoria 1</th>
+                        <th>Kategoria 2</th>
+                        <th>Kategoria 3</th>
+                        </tr>
+                        <tr>
+                        <td id="nested">
+                            <table id="table2">
+                            <tr>
+                                <td>Komórka 1</td>
+                                <td>Komórka 2</td>
+                                <td>Komórka 3</td>
+                            </tr>
+                            </table>
+                        </td>
+                        <td>Komórka 2</td>
+                        <td>Komórka 3</td>
+                        </tr>
+                        <tr>
+                        <td>Komórka 4</td>
+                        <td>Komórka 5</td>
+                        <td>Komórka 6</td>
+                        </tr>
+                    </table>
+                
+
+
+        </main>
+        <footer class="pt-10 pl-20">
+            <div class="grid grid-cols-2">
+                <div>
+                    <span class="text-xl mr-3">Strona stworzona przez <a href="https://www.accens.io/"><img src="../images/logo-accens-1000.png" alt="Accens" class="inline-block h-10"></a></span>
+                    <span class="text-xl">Kontakt: <a class="text-xl" href="mailto:master@accens.io">master@accens.io</a></span>
+                </div>
+                <div>
+                    <a class="text-xl" href="../sitemap.html">Mapa strony</a>
+                </div>
+            </div>
+    </footer>
+    <script src="../functions.js"></script>
+</body>
+</html>
