@@ -30,6 +30,17 @@ h3 {
   padding: 1rem;
 }
 
+h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+h5 {
+  padding: 1rem;
+  font-style: italic;
+}
+
 p a{
   color: inherit;
   text-decoration: underline;
@@ -212,5 +223,33 @@ svg {
   .overflow {
     overflow-x: hidden;
   }
+}
+
+table{
+  width:100%;
+  max-width:800px;
+  border: 1px solid #555555;
+  border-radius: 0.5rem;
+  border-spacing: 0px;
+}
+table td{
+  border: 1px solid #7f7f7f;
+  text-align: center;
+  vertical-align: middle;
+}
+tr>td:first-child{
+  border-left:0px;
+} 
+tr>td:last-child{
+  border-right:0px;
+}
+tbody > tr:last-child > td:first-child,
+tbody > tr:last-child > td:last-child{
+  border-bottom:0px;
+}
+tr > th{
+  border-bottom: 1px;
+  text-align: center;
+  vertical-align: middle;
 }
 

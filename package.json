@@ -3,7 +3,8 @@
     "dev": "http-server -c10",
     "build": "webpack --config=./webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -c10"
+    "start": "http-server -c10",
+    "update-css": "tailwindcss build styles.css -o dist/tailwind.css"
   },
   "devDependencies": {
     "http-server": "^14.1.1",

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -32,9 +32,11 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -44,12 +46,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -121,8 +125,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -131,8 +137,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -201,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -224,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -482,6 +494,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -532,6 +548,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .sr-only {
@@ -548,6 +568,10 @@ video {
 
 .absolute {
   position: absolute;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .top-32 {
@@ -674,6 +698,10 @@ video {
   width: 100%;
 }
 
+.border-collapse {
+  border-collapse: collapse;
+}
+
 .origin-top-right {
   transform-origin: top right;
 }
@@ -737,6 +765,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -758,10 +790,6 @@ video {
 
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .p-8 {
@@ -804,10 +832,6 @@ video {
   vertical-align: middle;
 }
 
-.font-display {
-  font-family: Poppins, sans-serif;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -821,16 +845,6 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-xl {
@@ -872,6 +886,269 @@ video {
   --tw-ring-opacity: 0.05;
 }
 
+body {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+html{
+  font-family: 'Poppins';
+  font-feature-settings: normal;
+  font-variant: normal;
+}
+
+h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+h5 {
+  padding: 1rem;
+  font-style: italic;
+}
+
+p a{
+  color: inherit;
+  text-decoration: underline;
+}
+
+span a{
+  color: inherit;
+  text-decoration: underline;
+}
+
+a{
+  color: inherit;
+  text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  margin: 2 auto;
+  align-items: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  display:flex;
+}
+
+nav > ul > li {
+  display:flex;
+}
+
+.mainpage-logo {
+  max-height: 5rem;
+}
+
+#menu-good-practices{
+  display: none;
+}
+
+.skiplink{
+  left: 0;
+  padding: 3px;
+  display: block;
+  position: relative;
+  max-width: 50%;
+  transform: translateY(-400%);
+}
+
+.skiplink:focus{
+  transform: translateY(0%);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible{
+  outline: 2px solid red/*!important*/;
+}
+
+#btn-inA11y_products:hover{
+  cursor: pointer;
+}
+
+.mobile-menu{
+  width: 36.25rem;
+  height: 5.1875rem;
+  flex-shrink: 0;
+  background-color: #F8F382;
+  stroke-width: 1px;
+  stroke: #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-color: #F8F382;
+  border-radius: 1rem;
+}
+
+.mobile-button{
+  flex-shrink: 0;
+  margin-left: 1.9rem;
+  margin-right: 1.9rem;
+  /*padding-left: 3rem;
+  padding-right: 3rem;*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 50px;
+  height: 70px;
+}
+
+.mobile-button>svg{
+  /*??*/
+}
+
+.mobile-screen{
+  width: 36.25rem;
+  height: 15.875rem;
+  background-color: #f4f1c4;
+  stroke-width: 1px;
+  stroke: #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-color: #f4f1c4;
+  border-radius: 1rem;
+}
+
+.separator{
+  height:100px;
+}
+
+.separator-12{
+  height:50px;
+}
+
+.logo-link{
+  height: 65px;
+  width: 65px;
+  margin:1rem;
+}
+
+.logo-link:focus-visible{
+  border-color: red;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  margin:1rem;
+}
+
+dialog::backdrop{
+  background-color: #555555;
+}
+
+/* new additions to funcionality */
+
+svg {
+  height: 20px;
+  width: 20px;
+  fill: rgb(0 57 99);
+}
+
+.amputeeImg{
+  border-radius: 1rem;
+}
+
+#prettyLinkOne, #prettyLinkTwo {
+  text-decoration: none;
+  display:inline-flex;
+}
+
+#prettyLinkOne:after, #prettyLinkTwo:after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: rgb(0 57 99);
+  transition: 300ms;
+}
+
+#prettyLinkOne:hover:after, #prettyLinkTwo:hover:after {
+  width: 100%;
+}
+
+.notResizable {
+  background-color: aquamarine;
+  height: 150px;
+  width: 1450px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.fakeButton {
+  background-color: rgb(0, 57, 99);
+  padding: 8px 24px;
+  border-top: 2px solid rgb(0, 57, 99);
+  border-right: 2px solid rgb(0, 57, 99);
+  border-bottom: 2px solid rgb(0, 57, 99);
+  border-left: 2px solid rgb(0, 57, 99);
+  border-radius: 9999px;
+  transition: opacity 0.4s;
+}
+
+.fakeButton:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width:600px) {
+  .overflow {
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (min-width:601px) and (max-width:1200px) {
+  .overflow {
+    overflow-x: hidden;
+  }
+}
+
+table{
+  width:100%;
+  max-width:800px;
+  border: 1px solid #555555;
+  border-radius: 0.5rem;
+  border-spacing: 0px;
+}
+
+table td{
+  border: 1px solid #7f7f7f;
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr>td:first-child{
+  border-left:0px;
+}
+
+tr>td:last-child{
+  border-right:0px;
+}
+
+tbody > tr:last-child > td:first-child,
+tbody > tr:last-child > td:last-child{
+  border-bottom:0px;
+}
+
+tr > th{
+  border-bottom: 1px;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .focus\:not-sr-only:focus {
   position: static;
   width: auto;
@@ -882,3 +1159,4 @@ video {
   clip: auto;
   white-space: normal;
 }
+
