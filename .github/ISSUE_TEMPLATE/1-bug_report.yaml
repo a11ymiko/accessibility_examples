@@ -5,7 +5,7 @@ labels: ["bug"]
 body:
   - type: checkboxes
     id: need_more
-      attributes:
+    attributes:
       - label: Do you want to provide repro steps or logs?
     options:
       label: Yes — I will provide repro steps/logs
