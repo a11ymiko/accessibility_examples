@@ -6,7 +6,7 @@ body:
   - type: checkboxes
     id: need_more
       attributes:
-      label: Do you want to provide repro steps or logs?
+      - label: Do you want to provide repro steps or logs?
     options:
       label: Yes — I will provide repro steps/logs
     value: yes_provide
