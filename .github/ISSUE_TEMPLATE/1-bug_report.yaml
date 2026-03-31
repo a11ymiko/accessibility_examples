@@ -7,9 +7,9 @@ body:
     id: need_more
     attributes:
       label: Do you want to provide repro steps or logs?
-    options:
-      - label: Yes — I will provide repro steps/logs
-    value: yes_provide
+      options:
+        - label: Yes — I will provide repro steps/logs
+          value: yes_provide
     validations:
       required: false
 
@@ -19,7 +19,7 @@ body:
       label: Reproduction steps and logs
       description: Paste steps, logs, or screenshots here.
     depends_on:
-      id: need_more
-      value: yes_provide
-      validations:
-        required: true
+      - id: need_more
+        value: yes_provide
+    validations:
+      required: true
