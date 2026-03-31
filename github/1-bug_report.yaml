@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a bug
+title: "[BUG] "
+labels: ["bug"]
+body:
+- type: checkboxes
+  id: need_more
+  attributes:
+  label: Do you want to provide repro steps or logs?
+  options:
+  - label: Yes — I will provide repro steps/logs
+  value: yes_provide
+  validations:
+  required: false
+
+- type: textarea
+  id: repro_steps
+  attributes:
+  label: Reproduction steps and logs
+  description: Paste steps, logs, or screenshots here.
+  depends_on:
+
+  id: need_more
+  value: yes_provide
+  validations:
+  required: true
