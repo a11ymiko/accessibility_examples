@@ -6,13 +6,13 @@ body:
   - type: checkboxes
     id: need_more
     attributes:
-      - label: Do you want to provide repro steps or logs?
+      label: Do you want to provide repro steps or logs?
     options:
-      label: Yes — I will provide repro steps/logs
+      - label: Yes — I will provide repro steps/logs
     value: yes_provide
     validations:
-    required: false
-  
+      required: false
+
   - type: textarea
     id: repro_steps
     attributes:
@@ -22,4 +22,4 @@ body:
       id: need_more
       value: yes_provide
       validations:
-      required: true
+        required: true
