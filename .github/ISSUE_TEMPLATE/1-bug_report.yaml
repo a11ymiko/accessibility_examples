@@ -3,11 +3,13 @@ description: Report a bug
 title: "[BUG] "
 labels: ["bug"]
 body:
-  - type: checkboxes
+  - type: dropdown
     id: need_more
     attributes:
       label: Do you want to provide repro steps or logs?
       options:
+        - label: No
+          value: no
         - label: Yes — I will provide repro steps/logs
           value: yes_provide
     validations:
